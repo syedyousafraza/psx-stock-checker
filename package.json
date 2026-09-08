@@ -1,0 +1,24 @@
+{
+  "name": "psx-quant-swarm",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test backend/**/*.test.js",
+    "dev": "concurrently \"node backend/server.js\" \"vite --host 0.0.0.0\"",
+    "build": "vite build",
+    "start": "node backend/server.js",
+    "playwright:install": "playwright install chromium",
+    "lint": "node --check backend/contracts.js && node --check backend/data-engine.js && node --check backend/math-agents.js && node --check backend/risk-engine.js && node --check backend/psx-adapter.js && node --check backend/broker-adapter.js && node --check backend/prediction-engine.js && node --check backend/decision-engine.js && node --check backend/catalyst-agent.js && node --check backend/backtest-engine.js && node --check backend/server.js"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "cheerio": "^1.2.0",
+    "concurrently": "latest",
+    "express": "latest",
+    "playwright": "^1.63.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest"
+  }
+}
