@@ -54,3 +54,14 @@ npm run playwright:install
 When a symbol is selected, the React client requests `/api/research/:symbol`; the agent opens the public PSX Market Summary and TradingView PSX chart page in separate Playwright pages, captures page titles, URLs, status codes, excerpts, and source verification. The TradingView chart is supporting browser evidence only; its rendered chart/network stream is not treated as a verified application OHLCV feed. It does not automate credentials or bypass access controls.
 
 All agent returns are shallow-frozen JSON contracts. This is an analytics framework, not investment advice or an execution venue.
+
+
+
+Commands to run
+Command	Purpose
+npm run dev	Full stack: backend API (:8787) + Vite frontend (:5173) — open http://localhost:5173 (http://localhost:5173)
+node backend/server.js	Backend API only (if already running separately)
+npm test	Run test suite (currently 17/17 pass)
+npm run build	Build production frontend → dist/
+npm run lint	Syntax-check all backend files
+Right now you don't need to run anything — both servers are already listening. Just refresh http://localhost:5173.

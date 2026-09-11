@@ -2,15 +2,42 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { forecastPrices } from './prediction-engine.js';
 
-test('returns a bounded, non-actionable baseline forecast', () => {
+test('returns a bounded, non-actionable calibrated forecast', () => {
   const bars = Array.from({ length: 40 }, (_, index) => ({
     timestamp: index,
     close: 100 + index * 0.4,
     volume: 1_000,
   }));
-  const result = forecastPrices(bars, { horizonBars: 2 });
-  assert.equal(result.modelStatus, 'BASELINE_UNCALIBRATED');
+  const result = forecastPrices(bars, { horizonBars: 2, asOfMs: 100 });
+  assert.equal(result.modelStatus, 'PARTIALLY_CALIBRATED');
   assert.equal(result.actionable, false);
   assert.ok(result.lowerBound < result.expectedPrice);
   assert.ok(result.expectedPrice < result.upperBound);
+  assert.ok(result.factors);
+  assert.ok(Number.isFinite(result.factors.expectedPerBar));
+});
+
+test('anchors the forecast to the fresher live quote and keeps the expected date in the future', () => {
+  const bars = Array.from({ length: 40 }, (_, index) => ({
+    timestamp: 1000 + index,
+    close: 100 + index * 0.4,
+    volume: 1_000,
+  }));
+  const result = forecastPrices(bars, { horizonBars: 5, anchorPrice: 150, anchorTimestamp: 10_000, asOfMs: 10_000 });
+  assert.equal(result.lastPrice, 150);
+  assert.equal(result.anchorPrice, 150);
+  assert.equal(result.anchorSource, 'LIVE_PSX_QUOTE');
+  const expectedMs = new Date(result.expectedDate).getTime();
+  assert.ok(expectedMs > 10_000, `expected date ${result.expectedDate} must be after the anchor timestamp`);
+});
+
+test('flags stale historical series via dataStalenessDays', () => {
+  const base = 1_700_000_000_000;
+  const bars = Array.from({ length: 40 }, (_, index) => ({
+    timestamp: base + index * 86_400_000,
+    close: 100 + index * 0.4,
+    volume: 1_000,
+  }));
+  const result = forecastPrices(bars, { horizonBars: 1, asOfMs: base + 50 * 86_400_000 });
+  assert.equal(result.dataStalenessDays, 11);
 });

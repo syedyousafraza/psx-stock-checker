@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { applyCorporateActions, filterBadPrints, reconcileStreams } from './data-engine.js';
+import { applyCorporateActions, detectCorporateActions, filterBadPrints, reconcileStreams } from './data-engine.js';
 import { HurstExponent, KalmanFilter } from './math-agents.js';
 
 const bars = Array.from({ length: 32 }, (_, index) => ({ timestamp: index, close: 100 + index, volume: 1000 }));
@@ -23,6 +23,23 @@ test('rejects a three-sigma bad print without volume confirmation', () => {
 test('applies split factor backward to prices and forward to volume', () => {
   const result = applyCorporateActions([{ timestamp: 1, close: 100, volume: 10 }, { timestamp: 3, close: 110, volume: 20 }], [{ timestamp: 2, factor: 2 }]);
   assert.deepEqual(result.bars.map(({ close, volume }) => ({ close, volume })), [{ close: 50, volume: 20 }, { close: 110, volume: 20 }]);
+});
+
+test('detects a split discontinuity and smooths the series back to continuity', () => {
+  const series = Array.from({ length: 60 }, (_, index) => ({
+    timestamp: 1700000000000 + index * 86_400_000,
+    close: index < 40 ? 500 + index : index === 40 ? 102 : 102 + (index - 40) * 0.5,
+    volume: index < 40 ? 100_000 : 500_000,
+  }));
+  const detected = detectCorporateActions(series);
+  assert.equal(detected.actions.length, 1);
+  assert.ok(detected.actions[0].factor > 4);
+  const adjusted = applyCorporateActions(series, detected.actions);
+  const jumps = [];
+  for (let index = 1; index < adjusted.bars.length; index += 1) {
+    jumps.push(Math.abs(1 - adjusted.bars[index].close / adjusted.bars[index - 1].close));
+  }
+  assert.ok(Math.max(...jumps) < 0.05, `series should be continuous after adjustment, max jump ${Math.max(...jumps)}`);
 });
 
 test('returns an immutable Kalman track with verification', () => {

@@ -1,4 +1,5 @@
 import { forecastPrices } from './prediction-engine.js';
+import { HurstExponent } from './math-agents.js';
 import { dataVerification, immutableContract } from './contracts.js';
 
 function mean(values) {
@@ -33,7 +34,8 @@ export function walkForwardBacktest(bars, {
     const actualStart = Number(training.at(-1).close);
     const actualEnd = Number(bars[cutoff + horizonBars].close);
     const actualReturn = actualEnd / actualStart - 1;
-    const forecast = forecastPrices(training, { horizonBars });
+    const regime = HurstExponent(training.map((bar) => Number(bar.close))).value;
+    const forecast = forecastPrices(training, { horizonBars, hurstValue: regime });
     const error = forecast.expectedReturn - actualReturn;
     const volatility = Number(forecast.volatility) || 0;
     const edgeScore = volatility > 0 ? forecast.expectedReturn / volatility : 0;

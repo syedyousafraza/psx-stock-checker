@@ -2,7 +2,7 @@ import express from 'express';
 import { randomUUID } from 'node:crypto';
 import { getListedSymbols, getLiveQuote, getOfficialHistoricalBars } from './psx-adapter.js';
 import { brokerConfigured } from './broker-adapter.js';
-import { applyCorporateActions, filterBadPrints } from './data-engine.js';
+import { appendLiveQuote, applyCorporateActions, detectCorporateActions, filterBadPrints } from './data-engine.js';
 import { forecastPrices } from './prediction-engine.js';
 import { HurstExponent, KalmanFilter, adfStatistic } from './math-agents.js';
 import { researchSymbol } from './research-agent.js';
@@ -67,33 +67,48 @@ async function buildAnalysis(symbol, query) {
   const mode = query.mode === 'macro' ? 'macro' : 'weekly';
   const horizonBars = mode === 'macro' ? 21 : 5;
   const historical = await getOfficialHistoricalBars(normalized, { limit: Number(query.limit) || 500 });
-  const filtered = filterBadPrints(historical.bars);
-  const matrix = applyCorporateActions(filtered.bars);
+  const actions = detectCorporateActions(historical.bars);
+  const adjusted = applyCorporateActions(historical.bars, actions.actions);
+  const filtered = filterBadPrints(adjusted.bars);
+  const matrix = {
+    ...filtered,
+    bars: appendLiveQuote(filtered.bars, live.quote),
+  };
   const closes = matrix.bars.map((bar) => bar.close);
   const hurst = HurstExponent(closes);
   const adf = adfStatistic(closes);
-  const prediction = forecastPrices(matrix.bars, { horizonBars });
+  const anchorPrice = Number.isFinite(Number(live.quote.close)) ? Number(live.quote.close) : null;
+  const anchorTimestamp = Number.isFinite(Number(live.quote.timestamp)) ? Number(live.quote.timestamp) : null;
+  const prediction = forecastPrices(matrix.bars, { horizonBars, anchorPrice, anchorTimestamp, hurstValue: hurst.value });
   const returns = closes.slice(1).map((close, index) => Math.log(close / closes[index]));
   const risk = riskProfile(returns, { capital: Number(process.env.PAPER_CAPITAL || 1_000_000) });
   const catalyst = await getCatalystEvents(normalized);
   const kalman = KalmanFilter(matrix.bars);
   const signal = generateSignal({ bars: matrix.bars, hurst, adf, prediction, risk, quote: live.quote });
+  const validation = walkForwardBacktest(matrix.bars, {
+    horizonBars,
+    step: mode === 'macro' ? 21 : 5,
+    capital: Number(process.env.PAPER_CAPITAL || 1_000_000),
+    edgeThreshold: 0.5,
+  });
   return {
     symbol: normalized,
     quote: live.quote,
     matrix,
-    rejected: filtered.rejected,
+    corporateActions: actions.actions,
+    rejected: matrix.rejected,
     kalman,
     hurst,
     adf,
     prediction,
     risk,
     catalyst,
+    validation,
     mode,
     signal,
     dataVerification: {
       epochMs: Date.now(),
-      sourceSignatures: [...live.dataVerification.sourceSignatures, ...historical.dataVerification.sourceSignatures],
+      sourceSignatures: [...live.dataVerification.sourceSignatures, ...historical.dataVerification.sourceSignatures, ...actions.dataVerification.sourceSignatures],
       dataPointCount: matrix.bars.length,
       divergenceScore: 0,
     },
@@ -151,12 +166,14 @@ app.get('/api/backtest/:symbol', async (request, response, next) => {
     const mode = request.query.mode === 'macro' ? 'macro' : 'weekly';
     const horizonBars = mode === 'macro' ? 21 : 5;
     const historical = await getOfficialHistoricalBars(normalized, { limit: Number(request.query.limit) || 500 });
-    const filtered = filterBadPrints(historical.bars);
-    const matrix = applyCorporateActions(filtered.bars);
+    const actions = detectCorporateActions(historical.bars);
+    const adjusted = applyCorporateActions(historical.bars, actions.actions);
+    const matrix = filterBadPrints(adjusted.bars);
     response.json({
       symbol: normalized,
       mode,
       source: historical.dataVerification,
+      corporateActions: actions.actions,
       result: walkForwardBacktest(matrix.bars, {
         horizonBars,
         step: mode === 'macro' ? 21 : 5,
