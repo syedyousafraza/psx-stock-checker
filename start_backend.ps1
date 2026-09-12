@@ -1,0 +1,1 @@
+& powershell -NoProfile -Command "& { C:\Program Files\nodejs\node.exe } C:\casino\backend\server.js"

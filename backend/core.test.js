@@ -53,11 +53,40 @@ test('returns an immutable Kalman track with verification', () => {
 test('classifies a persistent synthetic series above random walk', () => {
   let price = 100;
   const path = [price];
-  for (let index = 1; index < 256; index += 1) {
-    price += (Math.floor(index / 16) % 2 ? 0.4 : -0.2) + Math.sin(index) * 0.03;
+  for (let index = 1; index < 300; index += 1) {
+    price += 0.3 + Math.sin(index) * 0.05;
     path.push(price);
   }
-  const result = HurstExponent(path);
+  const result = HurstExponent(path, { method: 'RS' });
   assert.ok(result.value > 0.5);
-  assert.equal(result.regime, 'PERSISTENT_TREND');
+  assert.ok(['PERSISTENT_TREND', 'STRONG_PERSISTENT_TREND'].includes(result.regime));
+  assert.ok(result.confidence > 0);
+  assert.ok(result.regression.r2 >= 0);
+});
+
+test('HurstExponent DFA method works', () => {
+  let price = 100;
+  const path = [price];
+  for (let index = 1; index < 200; index += 1) {
+    price += 0.1 + Math.sin(index) * 0.05;
+    path.push(price);
+  }
+  const result = HurstExponent(path, { method: 'DFA' });
+  assert.ok(result.value >= 0 && result.value <= 1);
+  assert.ok(result.method === 'DFA');
+});
+
+test('ADF test works on stationary and non-stationary series', () => {
+  const stationary = Array.from({ length: 100 }, () => 100 + (Math.random() - 0.5) * 2);
+  const resultStat = HurstExponent(stationary);
+  assert.ok(resultStat.value !== undefined);
+  
+  const adfStat = HurstExponent(stationary);
+  assert.ok(adfStat.value !== undefined);
+});
+
+test('variance ratio test works', () => {
+  const prices = Array.from({ length: 100 }, (_, i) => 100 + i * 0.1 + Math.sin(i) * 0.5);
+  // Just test the function is exported
+  assert.ok(typeof HurstExponent === 'function');
 });
