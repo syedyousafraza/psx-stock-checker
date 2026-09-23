@@ -91,7 +91,7 @@ async function buildAnalysis(symbol, query) {
   
   const catalyst = await getCatalystEvents(normalized);
   const kalman = KalmanFilter(barsWithLive, { adaptive: true });
-  const signal = generateSignal({ bars: barsWithLive, hurst, adf, prediction, risk, quote: live.quote, catalyst });
+  const signal = generateSignal({ bars: barsWithLive, hurst, adf, prediction, risk, quote: live.quote, catalyst }, { allowPaperWithoutSpread: true, minConviction: 0.15, minQuality: 0.15, threshold: 0.15 });
   const order = signalToOrder(signal, { symbol: normalized });
   
   const validation = walkForwardBacktest(barsWithLive, {
@@ -178,7 +178,7 @@ async function buildPrediction(symbol, query) {
   const stress = stressTest(returns);
   const catalyst = await getCatalystEvents(normalized);
   const kalman = KalmanFilter(barsWithLive, { adaptive: true });
-  const signal = generateSignal({ bars: barsWithLive, hurst, adf, prediction, risk, quote: live.quote, catalyst }, { allowPaperWithoutSpread: true, minConviction: 0.2, minQuality: 0.2, threshold: 0.3 });
+  const signal = generateSignal({ bars: barsWithLive, hurst, adf, prediction, risk, quote: live.quote, catalyst }, { allowPaperWithoutSpread: true, minConviction: 0.15, minQuality: 0.15, threshold: 0.15 });
   return { symbol: normalized, quote: live.quote, matrix: { ...matrix, bars: barsWithLive }, prediction, risk, stress, catalyst, signal, hurst, adf, varianceRatio: vrTest, halfLife, kalman, mode, dataVerification: { epochMs: Date.now(), sourceSignatures: [...live.dataVerification.sourceSignatures, ...historical.dataVerification.sourceSignatures], dataPointCount: barsWithLive.length, divergenceScore: 0 } };
 }
 

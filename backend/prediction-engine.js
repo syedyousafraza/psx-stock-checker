@@ -328,7 +328,7 @@ function ensembleForecast(bars, horizonBars, hurstValue) {
     }
   }
   const historicalExtreme = historicalHorizonReturns.length ? Math.max(...historicalHorizonReturns.map(v => Math.abs(v))) : 0;
-  const extremeForecast = Math.abs(expectedReturn) > Math.max(0.15, historicalExtreme * 2.5);
+  const extremeForecast = Math.abs(expectedReturn) > Math.max(0.25, historicalExtreme * 3);
   
   const probabilities = computeProbabilities(expectedReturn, forecastVol);
   const confidence = computeConfidence(expectedReturn, forecastVol, historicalExtreme, regime, hurst.H);
@@ -510,7 +510,7 @@ export function forecastPrices(bars, {
   const direction = safeEnsemble.expectedPerBar > safeEnsemble.volatility * 0.3 ? 'UP' : 
                     safeEnsemble.expectedPerBar < -safeEnsemble.volatility * 0.3 ? 'DOWN' : 'UNCERTAIN';
   
-  const confidence = Math.min(0.95, Math.abs(safeEnsemble.expectedPerBar) / (safeEnsemble.volatility * 2 + 1e-6));
+  const confidence = ensemble.confidence;
 
   return immutableContract({
     model: 'ENSEMBLE_REGIME_GARCH_AR',

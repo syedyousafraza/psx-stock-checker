@@ -28,20 +28,20 @@ function convictionScore(prediction, hurst, adf, risk, catalyst) {
   const factors = {};
   
   const edgeScore = prediction.volatility > 0 ? Math.abs(prediction.expectedReturn) / prediction.volatility : 0;
-  factors.edge = Math.min(1, edgeScore / 2);
-  score += factors.edge * 0.25;
+  factors.edge = Math.min(1, edgeScore / 0.5);
+  score += factors.edge * 0.2;
   
   const hurstRegime = regimeFromHurst(hurst.value);
-  const regimeAlign = prediction.factors?.regimeProb?.trend > 0.5 && hurstRegime.includes('TREND') ||
-                      prediction.factors?.regimeProb?.meanReversion > 0.5 && hurstRegime.includes('MEAN_REVERSION');
-  factors.regimeAlignment = regimeAlign ? 1 : 0.3;
-  score += factors.regimeAlignment * 0.2;
+  const regimeAlign = prediction.factors?.regimeProb?.trend > 0.4 && hurstRegime.includes('TREND') ||
+                      prediction.factors?.regimeProb?.meanReversion > 0.4 && hurstRegime.includes('MEAN_REVERSION');
+  factors.regimeAlignment = regimeAlign ? 1 : 0.4;
+  score += factors.regimeAlignment * 0.18;
   
   factors.stationarity = adf.stationary ? 0.8 : 0.4;
   score += factors.stationarity * 0.15;
   
   factors.riskAdjusted = risk.authorized ? 1 : 0;
-  score += factors.riskAdjusted * 0.15;
+  score += factors.riskAdjusted * 0.12;
   
   factors.extremeCheck = !prediction.extremeForecast ? 1 : 0;
   score += factors.extremeCheck * 0.1;
@@ -70,10 +70,12 @@ function signalQuality(prediction, hurst, bars) {
   
   const regime = regimeFromHurst(hurst.value);
   let regimeBonus = 0;
-  if (regime === 'STRONG_TREND' && prediction.direction !== 'UNCERTAIN') regimeBonus = 0.2;
-  if (regime === 'STRONG_MEAN_REVERSION' && prediction.direction !== 'UNCERTAIN') regimeBonus = 0.1;
+  if (regime === 'STRONG_TREND' && prediction.direction !== 'UNCERTAIN') regimeBonus = 0.15;
+  if (regime === 'STRONG_MEAN_REVERSION' && prediction.direction !== 'UNCERTAIN') regimeBonus = 0.08;
+  if (regime === 'WEAK_TREND' && prediction.direction !== 'UNCERTAIN') regimeBonus = 0.05;
+  if (regime === 'WEAK_MEAN_REVERSION' && prediction.direction !== 'UNCERTAIN') regimeBonus = 0.03;
   
-  const quality = Math.min(1, signalToNoise / 1.5 + regimeBonus);
+  const quality = Math.min(1, signalToNoise / 0.5 + regimeBonus);
   
   return { quality, signalToNoise, regime, regimeBonus };
 }
@@ -133,16 +135,26 @@ export function generateSignal({ bars, hurst, adf, prediction, risk, quote, cata
   
   let directionalSignal = 'NO_TRADE';
   if (!prediction.extremeForecast && Math.abs(edgeScore) >= threshold) {
-    if (edgeScore > 0 && (persistence > 0.52 || prediction.factors?.regimeProb?.trend > 0.5)) {
+    if (edgeScore > 0 && (persistence > 0.45 || prediction.factors?.regimeProb?.trend > 0.4)) {
       directionalSignal = 'BUY';
-    } else if (edgeScore < 0 && allowShort && (persistence > 0.52 || prediction.factors?.regimeProb?.meanReversion > 0.5)) {
+    } else if (edgeScore < 0 && allowShort && (persistence > 0.45 || prediction.factors?.regimeProb?.meanReversion > 0.4)) {
+      directionalSignal = 'SELL';
+    } else if (edgeScore > 0 && prediction.factors?.regimeProb?.trend > 0.3 && persistence > 0.4) {
+      directionalSignal = 'BUY';
+    } else if (edgeScore < 0 && allowShort && prediction.factors?.regimeProb?.meanReversion > 0.3 && persistence > 0.4) {
+      directionalSignal = 'SELL';
+    }
+  } else if (!prediction.extremeForecast && Math.abs(edgeScore) >= threshold * 0.5 && (prediction.factors?.regimeProb?.trend > 0.6 || prediction.factors?.regimeProb?.meanReversion > 0.6)) {
+    if (edgeScore > 0) {
+      directionalSignal = 'BUY';
+    } else if (edgeScore < 0 && allowShort) {
       directionalSignal = 'SELL';
     }
   }
   
   const riskGate = Boolean(risk?.authorized) && liquidity.pass && (spread.pass || allowPaperWithoutSpread);
   const convictionGate = conviction.score >= minConviction;
-  const qualityGate = quality.quality >= minQuality;
+  const qualityGate = quality.quality >= Math.min(minQuality, 0.15);
   const extremeGate = !prediction.extremeForecast;
   
   const direction = (directionalSignal !== 'NO_TRADE' && riskGate && convictionGate && qualityGate && extremeGate) 

@@ -101,7 +101,7 @@ export function riskProfile(returns, {
   const sortino = downsideDeviation(returns) > 0 ? meanReturn / downsideDeviation(returns) * Math.sqrt(252) : 0;
   const calmar = maxDrawdownCalc(returns) > 0 ? (meanReturn * 252) / maxDrawdownCalc(returns) : 0;
   
-  const authorized = sharpe > 0.5 && sortino > 0.5 && calmar > 0.5 && finalAllocation > 0.005;
+  const authorized = sharpe > 0.15 && sortino > 0.15 && calmar > 0.15 && finalAllocation > 0.005;
   
   return immutableContract({
     var99,

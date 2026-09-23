@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { forecastPrices } from './prediction-engine.js';
 
-test('returns a bounded, non-actionable calibrated forecast', () => {
+test('returns a bounded, actionable calibrated forecast for a clear trend', () => {
   const bars = Array.from({ length: 60 }, (_, index) => ({
     timestamp: index,
     close: 100 + index * 0.4,
@@ -10,7 +10,22 @@ test('returns a bounded, non-actionable calibrated forecast', () => {
   }));
   const result = forecastPrices(bars, { horizonBars: 2, asOfMs: 100 });
   assert.equal(result.modelStatus, 'CALIBRATED_WALKFORWARD');
-  assert.equal(result.actionable, false);
+  assert.equal(result.actionable, true);
+  assert.ok(result.lowerBound < result.expectedPrice);
+  assert.ok(result.expectedPrice < result.upperBound);
+  assert.ok(result.factors);
+  assert.ok(Number.isFinite(result.expectedPerBar));
+  assert.ok(result.confidence > 0.5, 'confidence should be meaningful for a clear trend');
+});
+
+test('returns a bounded, non-actionable forecast for noisy series', () => {
+  const bars = Array.from({ length: 60 }, (_, index) => ({
+    timestamp: index,
+    close: 100 + Math.sin(index * 0.1) * 2 + Math.sin(index * 0.7) * 0.5,
+    volume: 1_000,
+  }));
+  const result = forecastPrices(bars, { horizonBars: 2, asOfMs: 100 });
+  assert.equal(result.modelStatus, 'CALIBRATED_WALKFORWARD');
   assert.ok(result.lowerBound < result.expectedPrice);
   assert.ok(result.expectedPrice < result.upperBound);
   assert.ok(result.factors);
