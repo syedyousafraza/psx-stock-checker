@@ -2,11 +2,14 @@ import * as cheerio from 'cheerio';
 import { chromium } from 'playwright';
 
 const MARKET_SUMMARY_URL = 'https://www.psx.com.pk/market-summary';
+const MARKET_WATCH_URL = 'https://dps.psx.com.pk/market-watch';
+const YAHOO_FINANCE_BASE = 'https://query1.finance.yahoo.com/v8/finance/chart';
 const REQUEST_TIMEOUT_MS = 15_000;
 let cachedSnapshot = null;
 let cacheExpiresAt = 0;
 let inFlightRequest = null;
 const historicalCache = new Map();
+const yahooCache = new Map();
 let symbolCatalog = null;
 
 function numberFromCell(value) {
@@ -15,10 +18,10 @@ function numberFromCell(value) {
   return Number.isFinite(parsed) ? parsed : null;
 }
 
-function sourceVerification(dataPointCount) {
+function sourceVerification(dataPointCount, sourceSignatures) {
   return {
     epochMs: Date.now(),
-    sourceSignatures: ['PSX_OFFICIAL_MARKET_SUMMARY_HTML'],
+    sourceSignatures: sourceSignatures || ['PSX_OFFICIAL_MARKET_SUMMARY_HTML'],
     sourceUrl: MARKET_SUMMARY_URL,
     dataPointCount,
     divergenceScore: 0,
@@ -41,17 +44,46 @@ function parseMarketSummary(html) {
   return quotes;
 }
 
+function parseMarketWatch(html) {
+  const $ = cheerio.load(html);
+  const quotes = [];
+  $('tr[data-symbol]').each((_index, row) => {
+    const symbol = $(row).attr('data-symbol')?.trim().toUpperCase().replace(/-SEP$/, '');
+    if (!symbol) return;
+    const cells = $(row).find('td').toArray().map((item) => $(item).text().trim());
+    const close = cells[3] ? Number(cells[3].replace(/,/g, '')) : null;
+    const volume = cells[4] ? Number(cells[4].replace(/,/g, '')) : null;
+    if (symbol && close !== null && volume !== null && !quotes.some((quote) => quote.symbol === symbol)) {
+      quotes.push({ symbol, timestamp: Date.now(), close, volume });
+    }
+  });
+  if (quotes.length === 0) throw new Error('PSX market watch returned no parseable quotes');
+  return quotes;
+}
+
 async function fetchSnapshot() {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
   try {
-    const response = await fetch(MARKET_SUMMARY_URL, {
+    const response = await fetch(MARKET_WATCH_URL, {
       signal: controller.signal,
       headers: { accept: 'text/html', 'user-agent': 'PSX-Quant-Swarm/1.0 (+live-data-client)' },
     });
-    if (!response.ok) throw new Error(`PSX market summary returned HTTP ${response.status}`);
-    const quotes = parseMarketSummary(await response.text());
-    return { quotes, dataVerification: sourceVerification(quotes.length) };
+    if (!response.ok) throw new Error(`PSX market watch returned HTTP ${response.status}`);
+    const quotes = parseMarketWatch(await response.text());
+    return { quotes, dataVerification: sourceVerification(quotes.length, ['PSX_MARKET_WATCH']) };
+  } catch (watchError) {
+    try {
+      const response = await fetch(MARKET_SUMMARY_URL, {
+        signal: controller.signal,
+        headers: { accept: 'text/html', 'user-agent': 'PSX-Quant-Swarm/1.0 (+live-data-client)' },
+      });
+      if (!response.ok) throw new Error(`PSX market summary returned HTTP ${response.status}`);
+      const quotes = parseMarketSummary(await response.text());
+      return { quotes, dataVerification: sourceVerification(quotes.length, ['PSX_OFFICIAL_MARKET_SUMMARY_HTML']) };
+    } catch (summaryError) {
+      throw new Error(`PSX market watch and market summary both failed: ${watchError.message}; ${summaryError.message}`);
+    }
   } finally {
     clearTimeout(timeout);
   }
@@ -85,9 +117,15 @@ export async function getLiveQuote(symbol) {
   return { quote: { ...quote, companyName: metadata?.name || null, sectorName: metadata?.sectorName || null }, dataVerification: snapshot.dataVerification };
 }
 
+const KSC30 = ['MARI','LUCK','ENGROH','OGDC','PPL','POL','HBL','UBL','MCB','BOP','BAHL','BAFL','PSO','FFC','EFERT','DGKC','FATIMA','LOTCHEM','COLG','NESTLE','NBP','SNGP','SYS','POWER','PIOC','FCL','ATBA','GHNI','TBL','HCAR'];
+const KSC100 = ['MARI','LUCK','ENGROH','OGDC','PPL','POL','HBL','UBL','MCB','BOP','BAHL','BAFL','PSO','FFC','EFERT','DGKC','FATIMA','LOTCHEM','COLG','NESTLE','NBP','SNGP','SYS','POWER','PIOC','FCL','ATBA','GHNI','TBL','HCAR','INDU','MTL','SAZEW','AGTL','SLM','WAVES','EPCL','PAEL','PCAL','THALL','DWAE','BELA','ATLH','DFML','AGIL','EXIDE','LOADS','PTL','SIEM','WAVESAPP','ACPL','BWCL','CHCC','DBCI','DNCC','DCL','FCCL','FECTC','GWLC','KOHC','MLCF','BAPL','BERG','BUXL','DAAG','DOL','DYNO','EPCLPS','GCIL','GCWL','GGL','ICL','LPGL','NICL','NRSL','PAKOXY','PPVC','SARC','SITC','SPL','WAHN','HGFA','HIFA','TSMF','ABL','AKBL','BML','BOK','BIPL','FABL','HMB','JSBL','MEBL','SBL','SNBL','SCBPL','UBL','AGHA','ASL','ASTL','BECO','BCL','CSAP','DSL','INIL','ISL','MSCL','MUGHAL','PECO','KEL','HUBC','GATM','PICT','POML','SSOM','ZAL','NETSOL','QTECH','SELECT','STL','SYM','TPLT','WTL','ZUMA','AATM','AMTEX','ASTM','CTM','CFL','DMC','DSIL','DFSM','DWTM','DINT','ELCM','ELSM','GADT','GUSM','GSPM','HIRAT','IDEAL','IDRT','IDYM','JATM','JKSM','JDMT','KSTM','KOHTM','MQTM','NATM','NAGC','NCML','PRET','RUBY','SAIF','SLYT','SNAI','SSML','SERT','SHDT','SHCM','SZTM','SUTM','TATM','ASHT','ICCI','PRWM','STJT','YOUW'];
+
 export async function getListedSymbols() {
   const snapshot = await getMarketSnapshot();
-  return { symbols: snapshot.quotes.map((quote) => quote.symbol), dataVerification: snapshot.dataVerification };
+  const symbols = snapshot.quotes.map((quote) => quote.symbol);
+  const ksc100 = KSC100.filter((sym) => symbols.includes(sym));
+  const ksc30 = KSC30.filter((sym) => symbols.includes(sym));
+  return { symbols, indexMembership: { ksc100, ksc30 }, dataVerification: snapshot.dataVerification };
 }
 
 async function getSymbolCatalog() {
@@ -136,18 +174,86 @@ export async function getOfficialHistoricalBars(symbol, { limit = 500 } = {}) {
   } finally {
     await browser.close();
   }
-  const resultBars = [...bars.values()].sort((left, right) => left.timestamp - right.timestamp).slice(-requestedLimit);
-  if (resultBars.length < 32) throw new Error(`PSX returned only ${resultBars.length} historical bars for ${normalized}`);
+  let resultBars = [...bars.values()].sort((left, right) => left.timestamp - right.timestamp).slice(-requestedLimit);
+  if (resultBars.length < 32) {
+    const yahooBars = await getYahooHistoricalBars(normalized, requestedLimit);
+    if (yahooBars.length >= 32) {
+      resultBars = yahooBars;
+    } else {
+      throw new Error(`PSX returned only ${resultBars.length} historical bars for ${normalized} and Yahoo Finance fallback also unavailable`);
+    }
+  }
   const value = {
     bars: resultBars,
     dataVerification: {
       epochMs: Date.now(),
-      sourceSignatures: ['PSX_OFFICIAL_HISTORICAL_PORTAL_PLAYWRIGHT'],
-      sourceUrl: 'https://dps.psx.com.pk/historical',
+      sourceSignatures: ['PSX_OFFICIAL_HISTORICAL_PORTAL_PLAYWRIGHT', 'YAHOO_FINANCE_FALLBACK'],
+      sourceUrl: resultBars.length >= requestedLimit ? 'https://dps.psx.com.pk/historical' : 'https://query1.finance.yahoo.com/v8/finance/chart',
       dataPointCount: resultBars.length,
       divergenceScore: 0,
     },
   };
   historicalCache.set(cacheKey, { value, expiresAt: Date.now() + 300_000 });
   return value;
+}
+
+export async function getMarketWatch() {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+  try {
+    const response = await fetch(MARKET_WATCH_URL, {
+      signal: controller.signal,
+      headers: { accept: 'text/html', 'user-agent': 'PSX-Quant-Swarm/1.0 (+live-data-client)' },
+    });
+    if (!response.ok) throw new Error(`PSX market watch returned HTTP ${response.status}`);
+    const quotes = parseMarketWatch(await response.text());
+    return { quotes, dataVerification: { ...sourceVerification(quotes.length), sourceSignatures: ['PSX_MARKET_WATCH'] } };
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+async function getYahooHistoricalBars(symbol, requestedLimit) {
+  const yahooSymbol = `${symbol}.KA`;
+  const cacheKey = `yahoo:${yahooSymbol}:${requestedLimit}`;
+  const cached = yahooCache.get(cacheKey);
+  if (cached && cached.expiresAt > Date.now()) return cached.value;
+  
+  const now = Date.now();
+  const period1 = Math.floor((now - 365 * 24 * 60 * 60 * 1000) / 1000);
+  const period2 = Math.floor(now / 1000);
+  
+  try {
+    const response = await fetch(`${YAHOO_FINANCE_BASE}/${encodeURIComponent(yahooSymbol)}?period1=${period1}&period2=${period2}&interval=1d`, {
+      headers: { 'user-agent': 'PSX-Quant-Swarm/1.0' },
+    });
+    if (!response.ok) throw new Error(`Yahoo Finance returned HTTP ${response.status}`);
+    const data = await response.json();
+    const result = data?.chart?.result?.[0];
+    if (!result || !result.timestamp || !result.indicators?.quote?.[0]) {
+      return [];
+    }
+    const timestamps = result.timestamp;
+    const quotes = result.indicators.quote[0];
+    const bars = [];
+    for (let i = 0; i < timestamps.length && bars.length < requestedLimit; i++) {
+      const bar = {
+        symbol,
+        timestamp: timestamps[i] * 1000,
+        open: quotes.open[i],
+        high: quotes.high[i],
+        low: quotes.low[i],
+        close: quotes.close[i],
+        volume: quotes.volume[i],
+      };
+      if (bar.close && bar.volume && Number.isFinite(bar.close) && Number.isFinite(bar.volume)) {
+        bars.push(bar);
+      }
+    }
+    bars.sort((a, b) => a.timestamp - b.timestamp);
+    yahooCache.set(cacheKey, { value: bars, expiresAt: Date.now() + 600_000 });
+    return bars;
+  } catch (error) {
+    return [];
+  }
 }

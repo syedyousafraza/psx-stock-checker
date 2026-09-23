@@ -1,8 +1,8 @@
 import { spawn } from 'node:child_process';
-import { createServer } from 'node:http';
+import { createServer, request } from 'node:http';
 
 const BACKEND_PORT = process.env.PORT || 8787;
-const VITE_PORT = process.env.VITE_PORT || 5173;
+const VITE_PORT = process.env.VITE_PORT || 5175;
 const BACKEND_URL = `http://localhost:${BACKEND_PORT}`;
 const MAX_WAIT_MS = 30_000;
 
@@ -10,8 +10,7 @@ function waitForBackend(url, timeoutMs) {
   return new Promise((resolve, reject) => {
     const startTime = Date.now();
     const interval = setInterval(() => {
-      const req = createServer();
-      const client = req.request('GET', url + '/health/live');
+      const client = request(new URL('/health/live', url), { method: 'GET' });
       client.setTimeout(2000, () => { client.destroy(); });
       client.on('response', (res) => {
         if (res.statusCode === 200) {
@@ -52,7 +51,7 @@ async function main() {
   }
 
   console.log('[startup] Starting Vite frontend...');
-  const vite = spawn('npx', ['vite', '--host', '0.0.0.0', '--port', String(VITE_PORT)], {
+  const vite = spawn('node', ['node_modules/vite/bin/vite.js', '--host', '0.0.0.0', '--port', String(VITE_PORT)], {
     cwd: process.cwd(),
     stdio: 'inherit',
     shell: false,

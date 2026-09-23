@@ -157,6 +157,39 @@ let features;
   };
 }
 
+async function buildPrediction(symbol, query) {
+  const normalized = symbol.trim().toUpperCase();
+  const live = await getLiveQuote(normalized);
+  const mode = query.mode === 'macro' ? 'macro' : 'weekly';
+  const horizonBars = mode === 'macro' ? 21 : 5;
+  const historical = await getOfficialHistoricalBars(normalized, { limit: Number(query.limit) || 1000 });
+  const matrix = prepareVerifiedMatrix(historical.bars, historical.bars, []);
+  const barsWithLive = appendLiveQuote(matrix.bars, live.quote);
+  const closes = barsWithLive.map((bar) => bar.close);
+  const hurst = HurstExponent(closes, { method: 'RS' });
+  const adf = adfStatistic(closes, { trend: 'c' });
+  const vrTest = varianceRatioTest(closes);
+  const halfLife = halfLifeMeanReversion(closes);
+  const anchorPrice = Number.isFinite(Number(live.quote.close)) ? Number(live.quote.close) : null;
+  const anchorTimestamp = Number.isFinite(Number(live.quote.timestamp)) ? Number(live.quote.timestamp) : null;
+  const prediction = forecastPrices(barsWithLive, { horizonBars, anchorPrice, anchorTimestamp, hurstValue: hurst.value });
+  const returns = closes.slice(1).map((close, index) => Math.log(close / closes[index]));
+  const risk = riskProfile(returns, { capital: Number(process.env.PAPER_CAPITAL || 1_000_000) });
+  const stress = stressTest(returns);
+  const catalyst = await getCatalystEvents(normalized);
+  const kalman = KalmanFilter(barsWithLive, { adaptive: true });
+  const signal = generateSignal({ bars: barsWithLive, hurst, adf, prediction, risk, quote: live.quote, catalyst }, { allowPaperWithoutSpread: true, minConviction: 0.2, minQuality: 0.2, threshold: 0.3 });
+  return { symbol: normalized, quote: live.quote, matrix: { ...matrix, bars: barsWithLive }, prediction, risk, stress, catalyst, signal, hurst, adf, varianceRatio: vrTest, halfLife, kalman, mode, dataVerification: { epochMs: Date.now(), sourceSignatures: [...live.dataVerification.sourceSignatures, ...historical.dataVerification.sourceSignatures], dataPointCount: barsWithLive.length, divergenceScore: 0 } };
+}
+
+app.get('/api/predict/:symbol', async (request, response, next) => {
+  try {
+    response.json(await buildPrediction(request.params.symbol, request.query));
+  } catch (error) {
+    next(error);
+  }
+});
+
 app.get('/api/analysis/:symbol', async (request, response, next) => {
   try {
     response.json(await buildAnalysis(request.params.symbol, request.query));

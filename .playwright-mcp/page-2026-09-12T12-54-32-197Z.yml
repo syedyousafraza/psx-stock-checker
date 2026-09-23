@@ -1,0 +1,1818 @@
+- generic [active] [ref=f4e1]:
+  - generic [ref=f4e2] [cursor=pointer]:
+    - button "×" [ref=f4e3]
+    - list [ref=f4e8]:
+      - listitem [ref=f4e9]
+  - generic [ref=f4e11]:
+    - generic [ref=f4e17]:
+      - generic [ref=f4e18]: Sep 12, 2026 5:55 PM
+      - link " PSX SUKUK PORTAL" [ref=f4e22] [cursor=pointer]:
+        - /url: /sukuk
+        - generic [ref=f4e23]: 
+        - generic [ref=f4e25]: PSX SUKUK PORTAL
+      - link " PSX KNOWLEDGE CENTER" [ref=f4e27] [cursor=pointer]:
+        - /url: https://knowledgecenter.psx.com.pk/
+        - generic [ref=f4e28]: 
+        - generic [ref=f4e30]: PSX KNOWLEDGE CENTER
+      - link " PSX CORPORATE WEBSITE" [ref=f4e32] [cursor=pointer]:
+        - /url: https://www.psx.com.pk/
+        - generic [ref=f4e33]: 
+        - generic [ref=f4e35]: PSX CORPORATE WEBSITE
+      - generic [ref=f4e37]:
+        - combobox [ref=f4e39]:
+          - option "Symbols" [selected]
+          - option "Website"
+        - textbox "Search..." [ref=f4e40]
+        - generic [ref=f4e41]: 
+    - generic [ref=f4e44]:
+      - link [ref=f4e46] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f4e48]:
+        - link "My Portfolio" [ref=f4e49] [cursor=pointer]:
+          - /url: /portfolio
+        - generic [ref=f4e51] [cursor=pointer]:
+          - text: Market
+          - generic [ref=f4e52]: 
+        - generic [ref=f4e54] [cursor=pointer]:
+          - text: Announcements
+          - generic [ref=f4e55]: 
+        - generic [ref=f4e57] [cursor=pointer]:
+          - text: Companies
+          - generic [ref=f4e58]: 
+        - generic [ref=f4e60] [cursor=pointer]:
+          - text: Reports
+          - generic [ref=f4e61]: 
+  - text:         
+  - generic [ref=f4e62]:
+    - text: 
+    - generic [ref=f4e64]:
+      - generic [ref=f4e66]:
+        - generic [ref=f4e68]:
+          - generic [ref=f4e69]:
+            - generic [ref=f4e70]: NBPPGI
+            - generic [ref=f4e71]: 48,781.37
+          - generic [ref=f4e72]:
+            - generic [ref=f4e73]:
+              - generic [ref=f4e74]: 
+              - text: "571.90"
+            - generic [ref=f4e75]: (1.19%)
+        - generic [ref=f4e77]:
+          - generic [ref=f4e78]:
+            - generic [ref=f4e79]: MZNPI
+            - generic [ref=f4e80]: 30,344.83
+          - generic [ref=f4e81]:
+            - generic [ref=f4e82]:
+              - generic [ref=f4e83]: 
+              - text: "470.28"
+            - generic [ref=f4e84]: (1.57%)
+        - generic [ref=f4e86]:
+          - generic [ref=f4e87]:
+            - generic [ref=f4e88]: JSMFI
+            - generic [ref=f4e89]: 42,489.33
+          - generic [ref=f4e90]:
+            - generic [ref=f4e91]:
+              - generic [ref=f4e92]: 
+              - text: "1305.05"
+            - generic [ref=f4e93]: (3.17%)
+        - generic [ref=f4e95]:
+          - generic [ref=f4e96]:
+            - generic [ref=f4e97]: ACI
+            - generic [ref=f4e98]: 22,026.89
+          - generic [ref=f4e99]:
+            - generic [ref=f4e100]:
+              - generic [ref=f4e101]: 
+              - text: "305.60"
+            - generic [ref=f4e102]: (1.41%)
+        - generic [ref=f4e104]:
+          - generic [ref=f4e105]:
+            - generic [ref=f4e106]: JSGBKTI
+            - generic [ref=f4e107]: 72,349.03
+          - generic [ref=f4e108]:
+            - generic [ref=f4e109]:
+              - generic [ref=f4e110]: 
+              - text: "360.98"
+            - generic [ref=f4e111]: (0.50%)
+        - generic [ref=f4e113]:
+          - generic [ref=f4e114]:
+            - generic [ref=f4e115]: HBLTTI
+            - generic [ref=f4e116]: 19,035.13
+            - generic [ref=f4e117]: 10-09-2026
+          - generic [ref=f4e118]:
+            - generic [ref=f4e119]:
+              - generic [ref=f4e120]: 
+              - text: "3.68"
+            - generic [ref=f4e121]: (0.02%)
+        - generic [ref=f4e123]:
+          - generic [ref=f4e124]:
+            - generic [ref=f4e125]: MII30
+            - generic [ref=f4e126]: 22,006.47
+          - generic [ref=f4e127]:
+            - generic [ref=f4e128]:
+              - generic [ref=f4e129]: 
+              - text: "326.46"
+            - generic [ref=f4e130]: (1.51%)
+        - generic [ref=f4e132]:
+          - generic [ref=f4e133]:
+            - generic [ref=f4e134]: KSE100
+            - generic [ref=f4e135]: 170,511.85
+          - generic [ref=f4e136]:
+            - generic [ref=f4e137]:
+              - generic [ref=f4e138]: 
+              - text: "1646.81"
+            - generic [ref=f4e139]: (0.98%)
+        - generic [ref=f4e141]:
+          - generic [ref=f4e142]:
+            - generic [ref=f4e143]: KSE100PR
+            - generic [ref=f4e144]: 51,519.47
+          - generic [ref=f4e145]:
+            - generic [ref=f4e146]:
+              - generic [ref=f4e147]: 
+              - text: "497.58"
+            - generic [ref=f4e148]: (0.98%)
+        - generic [ref=f4e150]:
+          - generic [ref=f4e151]:
+            - generic [ref=f4e152]: ALLSHR
+            - generic [ref=f4e153]: 103,203.79
+          - generic [ref=f4e154]:
+            - generic [ref=f4e155]:
+              - generic [ref=f4e156]: 
+              - text: "908.75"
+            - generic [ref=f4e157]: (0.89%)
+        - generic [ref=f4e159]:
+          - generic [ref=f4e160]:
+            - generic [ref=f4e161]: KSE30
+            - generic [ref=f4e162]: 50,839.22
+          - generic [ref=f4e163]:
+            - generic [ref=f4e164]:
+              - generic [ref=f4e165]: 
+              - text: "592.11"
+            - generic [ref=f4e166]: (1.18%)
+        - generic [ref=f4e168]:
+          - generic [ref=f4e169]:
+            - generic [ref=f4e170]: KMI30
+            - generic [ref=f4e171]: 243,245.60
+          - generic [ref=f4e172]:
+            - generic [ref=f4e173]:
+              - generic [ref=f4e174]: 
+              - text: "3852.07"
+            - generic [ref=f4e175]: (1.61%)
+        - generic [ref=f4e177]:
+          - generic [ref=f4e178]:
+            - generic [ref=f4e179]: BKTI
+            - generic [ref=f4e180]: 47,509.54
+          - generic [ref=f4e181]:
+            - generic [ref=f4e182]:
+              - generic [ref=f4e183]: 
+              - text: "361.93"
+            - generic [ref=f4e184]: (0.77%)
+        - generic [ref=f4e186]:
+          - generic [ref=f4e187]:
+            - generic [ref=f4e188]: OGTI
+            - generic [ref=f4e189]: 34,789.18
+          - generic [ref=f4e190]:
+            - generic [ref=f4e191]:
+              - generic [ref=f4e192]: 
+              - text: "547.01"
+            - generic [ref=f4e193]: (1.60%)
+        - generic [ref=f4e195]:
+          - generic [ref=f4e196]:
+            - generic [ref=f4e197]: KMIALLSHR
+            - generic [ref=f4e198]: 66,892.14
+          - generic [ref=f4e199]:
+            - generic [ref=f4e200]:
+              - generic [ref=f4e201]: 
+              - text: "757.53"
+            - generic [ref=f4e202]: (1.15%)
+        - generic [ref=f4e204]:
+          - generic [ref=f4e205]:
+            - generic [ref=f4e206]: PSXDIV20
+            - generic [ref=f4e207]: 78,055.85
+          - generic [ref=f4e208]:
+            - generic [ref=f4e209]:
+              - generic [ref=f4e210]: 
+              - text: "64.48"
+            - generic [ref=f4e211]: (0.08%)
+        - generic [ref=f4e213]:
+          - generic [ref=f4e214]:
+            - generic [ref=f4e215]: UPP9
+            - generic [ref=f4e216]: 60,755.74
+          - generic [ref=f4e217]:
+            - generic [ref=f4e218]:
+              - generic [ref=f4e219]: 
+              - text: "723.52"
+            - generic [ref=f4e220]: (1.21%)
+        - generic [ref=f4e222]:
+          - generic [ref=f4e223]:
+            - generic [ref=f4e224]: NITPGI
+            - generic [ref=f4e225]: 45,235.69
+          - generic [ref=f4e226]:
+            - generic [ref=f4e227]:
+              - generic [ref=f4e228]: 
+              - text: "502.00"
+            - generic [ref=f4e229]: (1.12%)
+        - generic [ref=f4e231]:
+          - generic [ref=f4e232]:
+            - generic [ref=f4e233]: NBPPGI
+            - generic [ref=f4e234]: 48,781.37
+          - generic [ref=f4e235]:
+            - generic [ref=f4e236]:
+              - generic [ref=f4e237]: 
+              - text: "571.90"
+            - generic [ref=f4e238]: (1.19%)
+        - generic [ref=f4e240]:
+          - generic [ref=f4e241]:
+            - generic [ref=f4e242]: MZNPI
+            - generic [ref=f4e243]: 30,344.83
+          - generic [ref=f4e244]:
+            - generic [ref=f4e245]:
+              - generic [ref=f4e246]: 
+              - text: "470.28"
+            - generic [ref=f4e247]: (1.57%)
+        - generic [ref=f4e249]:
+          - generic [ref=f4e250]:
+            - generic [ref=f4e251]: JSMFI
+            - generic [ref=f4e252]: 42,489.33
+          - generic [ref=f4e253]:
+            - generic [ref=f4e254]:
+              - generic [ref=f4e255]: 
+              - text: "1305.05"
+            - generic [ref=f4e256]: (3.17%)
+        - generic [ref=f4e258]:
+          - generic [ref=f4e259]:
+            - generic [ref=f4e260]: ACI
+            - generic [ref=f4e261]: 22,026.89
+          - generic [ref=f4e262]:
+            - generic [ref=f4e263]:
+              - generic [ref=f4e264]: 
+              - text: "305.60"
+            - generic [ref=f4e265]: (1.41%)
+        - generic [ref=f4e267]:
+          - generic [ref=f4e268]:
+            - generic [ref=f4e269]: JSGBKTI
+            - generic [ref=f4e270]: 72,349.03
+          - generic [ref=f4e271]:
+            - generic [ref=f4e272]:
+              - generic [ref=f4e273]: 
+              - text: "360.98"
+            - generic [ref=f4e274]: (0.50%)
+        - generic [ref=f4e276]:
+          - generic [ref=f4e277]:
+            - generic [ref=f4e278]: HBLTTI
+            - generic [ref=f4e279]: 19,035.13
+            - generic [ref=f4e280]: 10-09-2026
+          - generic [ref=f4e281]:
+            - generic [ref=f4e282]:
+              - generic [ref=f4e283]: 
+              - text: "3.68"
+            - generic [ref=f4e284]: (0.02%)
+        - generic [ref=f4e286]:
+          - generic [ref=f4e287]:
+            - generic [ref=f4e288]: MII30
+            - generic [ref=f4e289]: 22,006.47
+          - generic [ref=f4e290]:
+            - generic [ref=f4e291]:
+              - generic [ref=f4e292]: 
+              - text: "326.46"
+            - generic [ref=f4e293]: (1.51%)
+        - generic [ref=f4e295]:
+          - generic [ref=f4e296]:
+            - generic [ref=f4e297]: KSE100
+            - generic [ref=f4e298]: 170,511.85
+          - generic [ref=f4e299]:
+            - generic [ref=f4e300]:
+              - generic [ref=f4e301]: 
+              - text: "1646.81"
+            - generic [ref=f4e302]: (0.98%)
+        - generic [ref=f4e304]:
+          - generic [ref=f4e305]:
+            - generic [ref=f4e306]: KSE100PR
+            - generic [ref=f4e307]: 51,519.47
+          - generic [ref=f4e308]:
+            - generic [ref=f4e309]:
+              - generic [ref=f4e310]: 
+              - text: "497.58"
+            - generic [ref=f4e311]: (0.98%)
+        - generic [ref=f4e313]:
+          - generic [ref=f4e314]:
+            - generic [ref=f4e315]: ALLSHR
+            - generic [ref=f4e316]: 103,203.79
+          - generic [ref=f4e317]:
+            - generic [ref=f4e318]:
+              - generic [ref=f4e319]: 
+              - text: "908.75"
+            - generic [ref=f4e320]: (0.89%)
+        - generic [ref=f4e322]:
+          - generic [ref=f4e323]:
+            - generic [ref=f4e324]: KSE30
+            - generic [ref=f4e325]: 50,839.22
+          - generic [ref=f4e326]:
+            - generic [ref=f4e327]:
+              - generic [ref=f4e328]: 
+              - text: "592.11"
+            - generic [ref=f4e329]: (1.18%)
+        - generic [ref=f4e331]:
+          - generic [ref=f4e332]:
+            - generic [ref=f4e333]: KMI30
+            - generic [ref=f4e334]: 243,245.60
+          - generic [ref=f4e335]:
+            - generic [ref=f4e336]:
+              - generic [ref=f4e337]: 
+              - text: "3852.07"
+            - generic [ref=f4e338]: (1.61%)
+        - generic [ref=f4e340]:
+          - generic [ref=f4e341]:
+            - generic [ref=f4e342]: BKTI
+            - generic [ref=f4e343]: 47,509.54
+          - generic [ref=f4e344]:
+            - generic [ref=f4e345]:
+              - generic [ref=f4e346]: 
+              - text: "361.93"
+            - generic [ref=f4e347]: (0.77%)
+        - generic [ref=f4e349]:
+          - generic [ref=f4e350]:
+            - generic [ref=f4e351]: OGTI
+            - generic [ref=f4e352]: 34,789.18
+          - generic [ref=f4e353]:
+            - generic [ref=f4e354]:
+              - generic [ref=f4e355]: 
+              - text: "547.01"
+            - generic [ref=f4e356]: (1.60%)
+      - generic:
+        - button "" [ref=f4e357] [cursor=pointer]
+        - button "" [ref=f4e359] [cursor=pointer]
+    - generic [ref=f4e362]:
+      - generic [ref=f4e363]: Today's Summary
+      - generic [ref=f4e364]:
+        - link "Markets" [ref=f4e366] [cursor=pointer]:
+          - /url: javascript:void(0)
+        - link "Indices" [ref=f4e368] [cursor=pointer]:
+          - /url: javascript:void(0)
+        - link "Market Performers" [ref=f4e370] [cursor=pointer]:
+          - /url: javascript:void(0)
+        - link "Fixed Income Market Performers" [ref=f4e372] [cursor=pointer]:
+          - /url: javascript:void(0)
+        - link "Watchlist" [ref=f4e374] [cursor=pointer]:
+          - /url: javascript:void(0)
+        - link "Market Watch" [ref=f4e376] [cursor=pointer]:
+          - /url: javascript:void(0)
+        - text: 
+    - generic [ref=f4e377]:
+      - generic [ref=f4e379]:
+        - generic [ref=f4e380] [cursor=pointer]: Main Board
+        - generic [ref=f4e381] [cursor=pointer]: GEM Board
+        - generic [ref=f4e382] [cursor=pointer]: Debt
+      - generic [ref=f4e383]:
+        - generic [ref=f4e385]:
+          - link "Regular State Closed Trades 424,059 Volume 687,466,978 Value 33,704,635,696.27" [ref=f4e387] [cursor=pointer]:
+            - /url: /trading-panel#REG
+            - generic [ref=f4e388]: Regular
+            - generic [ref=f4e389]:
+              - generic [ref=f4e390]: State
+              - generic [ref=f4e391]: Closed
+            - generic [ref=f4e392]:
+              - generic [ref=f4e393]: Trades
+              - generic [ref=f4e394]: 424,059
+            - generic [ref=f4e395]:
+              - generic [ref=f4e396]: Volume
+              - generic [ref=f4e397]: 687,466,978
+            - generic [ref=f4e398]:
+              - generic [ref=f4e399]: Value
+              - generic [ref=f4e400]: 33,704,635,696.27
+          - link "DELIVERABLE FUTURES State Closed Trades 60,091 Volume 188,682,000 Value 10,531,107,050.00" [ref=f4e402] [cursor=pointer]:
+            - /url: /trading-panel#DFC
+            - generic [ref=f4e403]: DELIVERABLE FUTURES
+            - generic [ref=f4e404]:
+              - generic [ref=f4e405]: State
+              - generic [ref=f4e406]: Closed
+            - generic [ref=f4e407]:
+              - generic [ref=f4e408]: Trades
+              - generic [ref=f4e409]: 60,091
+            - generic [ref=f4e410]:
+              - generic [ref=f4e411]: Volume
+              - generic [ref=f4e412]: 188,682,000
+            - generic [ref=f4e413]:
+              - generic [ref=f4e414]: Value
+              - generic [ref=f4e415]: 10,531,107,050.00
+          - link "Cash Settled Futures State Closed Trades 0 Volume 0 Value 0.00" [ref=f4e417] [cursor=pointer]:
+            - /url: /trading-panel#CSF
+            - generic [ref=f4e418]: Cash Settled Futures
+            - generic [ref=f4e419]:
+              - generic [ref=f4e420]: State
+              - generic [ref=f4e421]: Closed
+            - generic [ref=f4e422]:
+              - generic [ref=f4e423]: Trades
+              - generic [ref=f4e424]: "0"
+            - generic [ref=f4e425]:
+              - generic [ref=f4e426]: Volume
+              - generic [ref=f4e427]: "0"
+            - generic [ref=f4e428]:
+              - generic [ref=f4e429]: Value
+              - generic [ref=f4e430]: "0.00"
+          - link "Odd Lot State Closed Trades 42 Volume 2,379 Value 53,176.67" [ref=f4e432] [cursor=pointer]:
+            - /url: /trading-panel#ODL
+            - generic [ref=f4e433]: Odd Lot
+            - generic [ref=f4e434]:
+              - generic [ref=f4e435]: State
+              - generic [ref=f4e436]: Closed
+            - generic [ref=f4e437]:
+              - generic [ref=f4e438]: Trades
+              - generic [ref=f4e439]: "42"
+            - generic [ref=f4e440]:
+              - generic [ref=f4e441]: Volume
+              - generic [ref=f4e442]: 2,379
+            - generic [ref=f4e443]:
+              - generic [ref=f4e444]: Value
+              - generic [ref=f4e445]: 53,176.67
+          - link "Square Up State Closed Trades 0 Volume 0 Value 0.00" [ref=f4e447] [cursor=pointer]:
+            - /url: /trading-panel#SQR
+            - generic [ref=f4e448]: Square Up
+            - generic [ref=f4e449]:
+              - generic [ref=f4e450]: State
+              - generic [ref=f4e451]: Closed
+            - generic [ref=f4e452]:
+              - generic [ref=f4e453]: Trades
+              - generic [ref=f4e454]: "0"
+            - generic [ref=f4e455]:
+              - generic [ref=f4e456]: Volume
+              - generic [ref=f4e457]: "0"
+            - generic [ref=f4e458]:
+              - generic [ref=f4e459]: Value
+              - generic [ref=f4e460]: "0.00"
+          - link "Stock Index Futures State Closed Trades 0 Volume 0 Value 0.00" [ref=f4e462] [cursor=pointer]:
+            - /url: /trading-panel#SIF
+            - generic [ref=f4e463]: Stock Index Futures
+            - generic [ref=f4e464]:
+              - generic [ref=f4e465]: State
+              - generic [ref=f4e466]: Closed
+            - generic [ref=f4e467]:
+              - generic [ref=f4e468]: Trades
+              - generic [ref=f4e469]: "0"
+            - generic [ref=f4e470]:
+              - generic [ref=f4e471]: Volume
+              - generic [ref=f4e472]: "0"
+            - generic [ref=f4e473]:
+              - generic [ref=f4e474]: Value
+              - generic [ref=f4e475]: "0.00"
+          - link "Negotiable Deal State Closed Trades 52 Volume 25,112,366 Value 1,242,776,061.39" [ref=f4e477] [cursor=pointer]:
+            - /url: /trading-panel#NDM
+            - generic [ref=f4e478]: Negotiable Deal
+            - generic [ref=f4e479]:
+              - generic [ref=f4e480]: State
+              - generic [ref=f4e481]: Closed
+            - generic [ref=f4e482]:
+              - generic [ref=f4e483]: Trades
+              - generic [ref=f4e484]: "52"
+            - generic [ref=f4e485]:
+              - generic [ref=f4e486]: Volume
+              - generic [ref=f4e487]: 25,112,366
+            - generic [ref=f4e488]:
+              - generic [ref=f4e489]: Value
+              - generic [ref=f4e490]: 1,242,776,061.39
+          - link "Margin Trading System State Suspended Trades 953 Volume 18,956,902 Value 257,485,933.24" [ref=f4e492] [cursor=pointer]:
+            - /url: /trading-panel#MTS
+            - generic [ref=f4e493]: Margin Trading System
+            - generic [ref=f4e494]:
+              - generic [ref=f4e495]: State
+              - generic [ref=f4e496]: Suspended
+            - generic [ref=f4e497]:
+              - generic [ref=f4e498]: Trades
+              - generic [ref=f4e499]: "953"
+            - generic [ref=f4e500]:
+              - generic [ref=f4e501]: Volume
+              - generic [ref=f4e502]: 18,956,902
+            - generic [ref=f4e503]:
+              - generic [ref=f4e504]: Value
+              - generic [ref=f4e505]: 257,485,933.24
+        - generic:
+          - button "" [ref=f4e506] [cursor=pointer]
+          - button "" [ref=f4e508] [cursor=pointer]
+    - generic [ref=f4e510]:
+      - heading "Indices" [level=1] [ref=f4e511]
+      - generic [ref=f4e512]:
+        - generic [ref=f4e513]:
+          - button "" [ref=f4e514] [cursor=pointer]
+          - generic [ref=f4e516]:
+            - generic [ref=f4e517] [cursor=pointer]: KSE100
+            - generic [ref=f4e518] [cursor=pointer]: KSE100PR
+            - generic [ref=f4e519] [cursor=pointer]: ALLSHR
+            - generic [ref=f4e520] [cursor=pointer]: KSE30
+            - generic [ref=f4e521] [cursor=pointer]: KMI30
+            - generic [ref=f4e522] [cursor=pointer]: BKTI
+            - generic [ref=f4e523] [cursor=pointer]: OGTI
+            - generic [ref=f4e524] [cursor=pointer]: KMIALLSHR
+            - generic [ref=f4e525] [cursor=pointer]: PSXDIV20
+            - generic [ref=f4e526] [cursor=pointer]: UPP9
+            - generic [ref=f4e527] [cursor=pointer]: NITPGI
+            - generic [ref=f4e528] [cursor=pointer]: NBPPGI
+            - generic [ref=f4e529] [cursor=pointer]: MZNPI
+            - generic [ref=f4e530] [cursor=pointer]: JSMFI
+            - generic [ref=f4e531] [cursor=pointer]: ACI
+            - generic [ref=f4e532] [cursor=pointer]: JSGBKTI
+            - generic [ref=f4e533] [cursor=pointer]: HBLTTI
+            - generic [ref=f4e534] [cursor=pointer]: MII30
+          - button "" [ref=f4e535] [cursor=pointer]
+        - generic [ref=f4e537]:
+          - generic [ref=f4e538]:
+            - heading "170,511.85  1,646.81 (0.98%)" [level=1] [ref=f4e539]:
+              - text: 170,511.85
+              - generic [ref=f4e540]:
+                - generic [ref=f4e541]: 
+                - text: 1,646.81 (0.98%)
+            - generic [ref=f4e542]: As of Sep 11, 2026 4:50 PM
+            - generic [ref=f4e543]:
+              - generic [ref=f4e544]:
+                - generic [ref=f4e545]: High
+                - generic [ref=f4e546]: 170,764.79
+              - generic [ref=f4e547]:
+                - generic [ref=f4e548]: Low
+                - generic [ref=f4e549]: 166,141.17
+              - generic [ref=f4e550]:
+                - generic [ref=f4e551]: Volume
+                - generic [ref=f4e552]: 278,745,924
+            - generic [ref=f4e553]:
+              - generic [ref=f4e554]:
+                - generic [ref=f4e555]: 1-Year Change
+                - generic [ref=f4e556]:
+                  - generic [ref=f4e557]: 
+                  - text: 9.20%
+              - generic [ref=f4e558]:
+                - generic [ref=f4e559]: YTD Change
+                - generic [ref=f4e560]:
+                  - generic [ref=f4e561]: 
+                  - text: "-2.04%"
+              - generic [ref=f4e562]:
+                - generic [ref=f4e563]: Previous Close
+                - generic [ref=f4e564]: 168,865.04
+            - generic [ref=f4e565]:
+              - generic [ref=f4e566]:
+                - generic [ref=f4e567]: DAY RANGE
+                - generic [ref=f4e568]: 166,141.17 — 170,764.79
+              - generic [ref=f4e572]:
+                - generic [ref=f4e573]: 52-WEEK RANGE
+                - generic [ref=f4e574]: 144,119.44 — 191,032.73
+          - text:                                                   
+          - generic [ref=f4e579]:
+            - generic [ref=f4e581]:
+              - generic [ref=f4e582] [cursor=pointer]: 1D
+              - generic [ref=f4e583] [cursor=pointer]: 1M
+              - generic [ref=f4e584] [cursor=pointer]: 6M
+              - generic [ref=f4e585] [cursor=pointer]: YTD
+              - generic [ref=f4e586] [cursor=pointer]: 1Y
+              - generic [ref=f4e587] [cursor=pointer]: 3Y
+              - generic [ref=f4e588] [cursor=pointer]: 5Y
+            - img [ref=f4e590]:
+              - generic [ref=f4e591]:
+                - generic [ref=f4e593]:
+                  - generic [ref=f4e594]: 12 PM
+                  - generic [ref=f4e596]: 03 PM
+                - generic [ref=f4e598]:
+                  - generic [ref=f4e599]: 166,000
+                  - generic [ref=f4e601]: 167,000
+                  - generic [ref=f4e603]: 168,000
+                  - generic [ref=f4e605]: 169,000
+                  - generic [ref=f4e607]: 170,000
+                  - generic [ref=f4e609]: 171,000
+    - generic [ref=f4e615]:
+      - heading "Market Performers" [level=1] [ref=f4e616]
+      - generic [ref=f4e617]:
+        - generic [ref=f4e618]:
+          - heading "TOP ACTIVE STOCKS" [level=3] [ref=f4e619]
+          - table [ref=f4e621]:
+            - rowgroup [ref=f4e622]:
+              - row [ref=f4e623]:
+                - columnheader "SYMBOL" [ref=f4e624] [cursor=pointer]
+                - columnheader "PRICE" [ref=f4e625] [cursor=pointer]
+                - columnheader "CHANGE" [ref=f4e626] [cursor=pointer]
+                - columnheader "VOLUME" [ref=f4e627] [cursor=pointer]
+            - rowgroup [ref=f4e628]:
+              - row [ref=f4e629]:
+                - cell [ref=f4e630]:
+                  - link [ref=f4e631] [cursor=pointer]:
+                    - /url: /company/CNERGY
+                    - strong [ref=f4e632]: CNERGY
+                - cell "12.93" [ref=f4e633]
+                - cell " 0.56 (4.53%)" [ref=f4e634]:
+                  - generic [ref=f4e635]: 
+                  - text: 0.56 (4.53%)
+                - cell "104,274,125" [ref=f4e636]
+              - row [ref=f4e637]:
+                - cell [ref=f4e638]:
+                  - link [ref=f4e639] [cursor=pointer]:
+                    - /url: /company/PRL
+                    - strong [ref=f4e640]: PRL
+                - cell "85.63" [ref=f4e641]
+                - cell " 4.70 (5.81%)" [ref=f4e642]:
+                  - generic [ref=f4e643]: 
+                  - text: 4.70 (5.81%)
+                - cell "66,012,255" [ref=f4e644]
+              - row [ref=f4e645]:
+                - cell [ref=f4e646]:
+                  - link [ref=f4e647] [cursor=pointer]:
+                    - /url: /company/MDTL
+                    - strong [ref=f4e648]: MDTL
+                - cell "6.92" [ref=f4e649]
+                - cell " 0.22 (3.28%)" [ref=f4e650]:
+                  - generic [ref=f4e651]: 
+                  - text: 0.22 (3.28%)
+                - cell "35,452,662" [ref=f4e652]
+              - row [ref=f4e653]:
+                - cell [ref=f4e654]:
+                  - link [ref=f4e655] [cursor=pointer]:
+                    - /url: /company/WTL
+                    - strong [ref=f4e656]: WTL
+                - cell "1.09" [ref=f4e657]
+                - cell "0.00 (0.00%)" [ref=f4e658]
+                - cell "32,608,697" [ref=f4e659]
+              - row [ref=f4e660]:
+                - cell [ref=f4e661]:
+                  - link [ref=f4e662] [cursor=pointer]:
+                    - /url: /company/WAVESAPPR
+                    - strong [ref=f4e663]: WAVESAPPR
+                - cell "0.17" [ref=f4e664]
+                - cell " -0.05 (-22.73%)" [ref=f4e665]:
+                  - generic [ref=f4e666]: 
+                  - text: "-0.05 (-22.73%)"
+                - cell "27,331,932" [ref=f4e667]
+              - row [ref=f4e668]:
+                - cell [ref=f4e669]:
+                  - link [ref=f4e670] [cursor=pointer]:
+                    - /url: /company/TSBL
+                    - strong [ref=f4e671]: TSBL
+                - cell "2.45" [ref=f4e672]
+                - cell " 0.03 (1.24%)" [ref=f4e673]:
+                  - generic [ref=f4e674]: 
+                  - text: 0.03 (1.24%)
+                - cell "26,433,822" [ref=f4e675]
+              - row [ref=f4e676]:
+                - cell [ref=f4e677]:
+                  - link [ref=f4e678] [cursor=pointer]:
+                    - /url: /company/MLCF
+                    - strong [ref=f4e679]: MLCF
+                - cell "95.40" [ref=f4e680]
+                - cell " 1.31 (1.39%)" [ref=f4e681]:
+                  - generic [ref=f4e682]: 
+                  - text: 1.31 (1.39%)
+                - cell "17,761,578" [ref=f4e683]
+              - row [ref=f4e684]:
+                - cell [ref=f4e685]:
+                  - link [ref=f4e686] [cursor=pointer]:
+                    - /url: /company/TISL
+                    - strong [ref=f4e687]: TISL
+                - cell "4.18" [ref=f4e688]
+                - cell " -0.06 (-1.41%)" [ref=f4e689]:
+                  - generic [ref=f4e690]: 
+                  - text: "-0.06 (-1.41%)"
+                - cell "17,130,380" [ref=f4e691]
+              - row [ref=f4e692]:
+                - cell [ref=f4e693]:
+                  - link [ref=f4e694] [cursor=pointer]:
+                    - /url: /company/SSGC
+                    - strong [ref=f4e695]: SSGC
+                - cell "23.64" [ref=f4e696]
+                - cell " -0.25 (-1.05%)" [ref=f4e697]:
+                  - generic [ref=f4e698]: 
+                  - text: "-0.25 (-1.05%)"
+                - cell "14,677,183" [ref=f4e699]
+              - row [ref=f4e700]:
+                - cell [ref=f4e701]:
+                  - link [ref=f4e702] [cursor=pointer]:
+                    - /url: /company/FNEL
+                    - strong [ref=f4e703]: FNEL
+                - cell "1.13" [ref=f4e704]
+                - cell " -0.01 (-0.88%)" [ref=f4e705]:
+                  - generic [ref=f4e706]: 
+                  - text: "-0.01 (-0.88%)"
+                - cell "12,869,381" [ref=f4e707]
+        - generic [ref=f4e708]:
+          - heading "TOP ADVANCERS" [level=3] [ref=f4e709]
+          - table [ref=f4e711]:
+            - rowgroup [ref=f4e712]:
+              - row [ref=f4e713]:
+                - columnheader "SYMBOL" [ref=f4e714] [cursor=pointer]
+                - columnheader "PRICE" [ref=f4e715] [cursor=pointer]
+                - columnheader "CHANGE" [ref=f4e716] [cursor=pointer]
+                - columnheader "VOLUME" [ref=f4e717] [cursor=pointer]
+            - rowgroup [ref=f4e718]:
+              - row [ref=f4e719]:
+                - cell [ref=f4e720]:
+                  - link [ref=f4e721] [cursor=pointer]:
+                    - /url: /company/FPJM
+                    - strong [ref=f4e722]: FPJM
+                - cell "18.77" [ref=f4e723]
+                - cell " 1.71 (10.02%)" [ref=f4e724]:
+                  - generic [ref=f4e725]: 
+                  - text: 1.71 (10.02%)
+                - cell "1,765,228" [ref=f4e726]
+              - row [ref=f4e727]:
+                - cell [ref=f4e728]:
+                  - link [ref=f4e729] [cursor=pointer]:
+                    - /url: /company/BPL
+                    - strong [ref=f4e730]: BPL
+                - cell "57.28" [ref=f4e731]
+                - cell " 5.21 (10.01%)" [ref=f4e732]:
+                  - generic [ref=f4e733]: 
+                  - text: 5.21 (10.01%)
+                - cell "390,001" [ref=f4e734]
+              - row [ref=f4e735]:
+                - cell [ref=f4e736]:
+                  - link [ref=f4e737] [cursor=pointer]:
+                    - /url: /company/SASML
+                    - strong [ref=f4e738]: SASML
+                - cell "341.36" [ref=f4e739]
+                - cell " 31.03 (10.00%)" [ref=f4e740]:
+                  - generic [ref=f4e741]: 
+                  - text: 31.03 (10.00%)
+                - cell "40,006" [ref=f4e742]
+              - row [ref=f4e743]:
+                - cell [ref=f4e744]:
+                  - link [ref=f4e745] [cursor=pointer]:
+                    - /url: /company/ASTM
+                    - strong [ref=f4e746]: ASTM
+                - cell "100.30" [ref=f4e747]
+                - cell " 9.07 (9.94%)" [ref=f4e748]:
+                  - generic [ref=f4e749]: 
+                  - text: 9.07 (9.94%)
+                - cell "469,435" [ref=f4e750]
+              - row [ref=f4e751]:
+                - cell "SLYT WU" [ref=f4e752]:
+                  - link [ref=f4e753] [cursor=pointer]:
+                    - /url: /company/SLYT
+                    - strong [ref=f4e754]: SLYT
+                  - generic [ref=f4e755]: WU
+                - cell "20.17" [ref=f4e756]
+                - cell " 1.80 (9.80%)" [ref=f4e757]:
+                  - generic [ref=f4e758]: 
+                  - text: 1.80 (9.80%)
+                - cell "101,438" [ref=f4e759]
+              - row [ref=f4e760]:
+                - cell [ref=f4e761]:
+                  - link [ref=f4e762] [cursor=pointer]:
+                    - /url: /company/FTSM
+                    - strong [ref=f4e763]: FTSM
+                - cell "38.72" [ref=f4e764]
+                - cell " 3.44 (9.75%)" [ref=f4e765]:
+                  - generic [ref=f4e766]: 
+                  - text: 3.44 (9.75%)
+                - cell "66,310" [ref=f4e767]
+              - row [ref=f4e768]:
+                - cell [ref=f4e769]:
+                  - link [ref=f4e770] [cursor=pointer]:
+                    - /url: /company/MSOT
+                    - strong [ref=f4e771]: MSOT
+                - cell "195.75" [ref=f4e772]
+                - cell " 15.74 (8.74%)" [ref=f4e773]:
+                  - generic [ref=f4e774]: 
+                  - text: 15.74 (8.74%)
+                - cell "100,980" [ref=f4e775]
+              - row [ref=f4e776]:
+                - cell [ref=f4e777]:
+                  - link [ref=f4e778] [cursor=pointer]:
+                    - /url: /company/OBOY
+                    - strong [ref=f4e779]: OBOY
+                - cell "17.36" [ref=f4e780]
+                - cell " 1.37 (8.57%)" [ref=f4e781]:
+                  - generic [ref=f4e782]: 
+                  - text: 1.37 (8.57%)
+                - cell "6,309,787" [ref=f4e783]
+              - row [ref=f4e784]:
+                - cell [ref=f4e785]:
+                  - link [ref=f4e786] [cursor=pointer]:
+                    - /url: /company/REWM
+                    - strong [ref=f4e787]: REWM
+                - cell "173.89" [ref=f4e788]
+                - cell " 13.51 (8.42%)" [ref=f4e789]:
+                  - generic [ref=f4e790]: 
+                  - text: 13.51 (8.42%)
+                - cell "404" [ref=f4e791]
+              - row [ref=f4e792]:
+                - cell [ref=f4e793]:
+                  - link [ref=f4e794] [cursor=pointer]:
+                    - /url: /company/JKSM
+                    - strong [ref=f4e795]: JKSM
+                - cell "341.29" [ref=f4e796]
+                - cell " 25.97 (8.24%)" [ref=f4e797]:
+                  - generic [ref=f4e798]: 
+                  - text: 25.97 (8.24%)
+                - cell "823" [ref=f4e799]
+        - generic [ref=f4e800]:
+          - heading "TOP DECLINERS" [level=3] [ref=f4e801]
+          - table [ref=f4e802]:
+            - rowgroup [ref=f4e803]:
+              - row [ref=f4e804]:
+                - columnheader "SYMBOL" [ref=f4e805] [cursor=pointer]
+                - columnheader "PRICE" [ref=f4e806] [cursor=pointer]
+                - columnheader "CHANGE" [ref=f4e807] [cursor=pointer]
+                - columnheader "VOLUME" [ref=f4e808] [cursor=pointer]
+            - rowgroup [ref=f4e809]:
+              - row [ref=f4e810]:
+                - cell [ref=f4e811]:
+                  - link [ref=f4e812] [cursor=pointer]:
+                    - /url: /company/WAVESAPPR
+                    - strong [ref=f4e813]: WAVESAPPR
+                - cell "0.17" [ref=f4e814]
+                - cell " -0.05 (-22.73%)" [ref=f4e815]:
+                  - generic [ref=f4e816]: 
+                  - text: "-0.05 (-22.73%)"
+                - cell "27,331,932" [ref=f4e817]
+              - row [ref=f4e818]:
+                - cell [ref=f4e819]:
+                  - link [ref=f4e820] [cursor=pointer]:
+                    - /url: /company/HUSI
+                    - strong [ref=f4e821]: HUSI
+                - cell "52.46" [ref=f4e822]
+                - cell " -5.83 (-10.00%)" [ref=f4e823]:
+                  - generic [ref=f4e824]: 
+                  - text: "-5.83 (-10.00%)"
+                - cell "102,775" [ref=f4e825]
+              - row [ref=f4e826]:
+                - cell [ref=f4e827]:
+                  - link [ref=f4e828] [cursor=pointer]:
+                    - /url: /company/PIM
+                    - strong [ref=f4e829]: PIM
+                - cell "61.64" [ref=f4e830]
+                - cell " -6.85 (-10.00%)" [ref=f4e831]:
+                  - generic [ref=f4e832]: 
+                  - text: "-6.85 (-10.00%)"
+                - cell "94,811" [ref=f4e833]
+              - row [ref=f4e834]:
+                - cell [ref=f4e835]:
+                  - link [ref=f4e836] [cursor=pointer]:
+                    - /url: /company/BUXL
+                    - strong [ref=f4e837]: BUXL
+                - cell "834.59" [ref=f4e838]
+                - cell " -92.73 (-10.00%)" [ref=f4e839]:
+                  - generic [ref=f4e840]: 
+                  - text: "-92.73 (-10.00%)"
+                - cell "6,158" [ref=f4e841]
+              - row [ref=f4e842]:
+                - cell [ref=f4e843]:
+                  - link [ref=f4e844] [cursor=pointer]:
+                    - /url: /company/TOWL
+                    - strong [ref=f4e845]: TOWL
+                - cell "146.28" [ref=f4e846]
+                - cell " -16.00 (-9.86%)" [ref=f4e847]:
+                  - generic [ref=f4e848]: 
+                  - text: "-16.00 (-9.86%)"
+                - cell "1,331,893" [ref=f4e849]
+              - row [ref=f4e850]:
+                - cell [ref=f4e851]:
+                  - link [ref=f4e852] [cursor=pointer]:
+                    - /url: /company/POWERPS
+                    - strong [ref=f4e853]: POWERPS
+                - cell "27.36" [ref=f4e854]
+                - cell " -2.97 (-9.79%)" [ref=f4e855]:
+                  - generic [ref=f4e856]: 
+                  - text: "-2.97 (-9.79%)"
+                - cell "610" [ref=f4e857]
+              - row [ref=f4e858]:
+                - cell [ref=f4e859]:
+                  - link [ref=f4e860] [cursor=pointer]:
+                    - /url: /company/GEMPACRA
+                    - strong [ref=f4e861]: GEMPACRA
+                - cell "33.75" [ref=f4e862]
+                - cell " -3.65 (-9.76%)" [ref=f4e863]:
+                  - generic [ref=f4e864]: 
+                  - text: "-3.65 (-9.76%)"
+                - cell "13,800" [ref=f4e865]
+              - row [ref=f4e866]:
+                - cell [ref=f4e867]:
+                  - link [ref=f4e868] [cursor=pointer]:
+                    - /url: /company/EWIC
+                    - strong [ref=f4e869]: EWIC
+                - cell "54.58" [ref=f4e870]
+                - cell " -5.65 (-9.38%)" [ref=f4e871]:
+                  - generic [ref=f4e872]: 
+                  - text: "-5.65 (-9.38%)"
+                - cell "1,000" [ref=f4e873]
+              - row [ref=f4e874]:
+                - cell [ref=f4e875]:
+                  - link [ref=f4e876] [cursor=pointer]:
+                    - /url: /company/FECM
+                    - strong [ref=f4e877]: FECM
+                - cell "22.94" [ref=f4e878]
+                - cell " -1.85 (-7.46%)" [ref=f4e879]:
+                  - generic [ref=f4e880]: 
+                  - text: "-1.85 (-7.46%)"
+                - cell "46,885" [ref=f4e881]
+              - row [ref=f4e882]:
+                - cell [ref=f4e883]:
+                  - link [ref=f4e884] [cursor=pointer]:
+                    - /url: /company/STYLERS
+                    - strong [ref=f4e885]: STYLERS
+                - cell "46.27" [ref=f4e886]
+                - cell " -3.73 (-7.46%)" [ref=f4e887]:
+                  - generic [ref=f4e888]: 
+                  - text: "-3.73 (-7.46%)"
+                - cell "13,453" [ref=f4e889]
+    - generic [ref=f4e890]:
+      - heading "Fixed Income Market Performers" [level=1] [ref=f4e891]
+      - generic [ref=f4e892]:
+        - generic [ref=f4e893]:
+          - heading "TOP ACTIVE SECURITIES" [level=3] [ref=f4e894]
+          - table [ref=f4e896]:
+            - rowgroup [ref=f4e897]:
+              - row [ref=f4e898]:
+                - columnheader "SYMBOL" [ref=f4e899] [cursor=pointer]
+                - columnheader "PRICE" [ref=f4e900] [cursor=pointer]
+                - columnheader "CHANGE" [ref=f4e901] [cursor=pointer]
+                - columnheader "VOLUME" [ref=f4e902] [cursor=pointer]
+            - rowgroup [ref=f4e903]:
+              - row [ref=f4e904]:
+                - cell [ref=f4e905]:
+                  - link [ref=f4e906] [cursor=pointer]:
+                    - /url: /debt/P03GHS151026
+                    - strong [ref=f4e907]: P03GHS151026
+                - cell "99.0400" [ref=f4e908]
+                - cell " 0.0950 (9.6013%)" [ref=f4e909]:
+                  - generic [ref=f4e910]: 
+                  - text: 0.0950 (9.6013%)
+                - cell "12,800,005,000" [ref=f4e911]
+              - row [ref=f4e912]:
+                - cell [ref=f4e913]:
+                  - link [ref=f4e914] [cursor=pointer]:
+                    - /url: /debt/P10VRR160436
+                    - strong [ref=f4e915]: P10VRR160436
+                - cell "100.5500" [ref=f4e916]
+                - cell " -0.7000 (-69.1358%)" [ref=f4e917]:
+                  - generic [ref=f4e918]: 
+                  - text: "-0.7000 (-69.1358%)"
+                - cell "7,130,000,000" [ref=f4e919]
+              - row [ref=f4e920]:
+                - cell [ref=f4e921]:
+                  - link [ref=f4e922] [cursor=pointer]:
+                    - /url: /debt/P01GHS100627
+                    - strong [ref=f4e923]: P01GHS100627
+                - cell "92.2300" [ref=f4e924]
+                - cell " 0.0900 (9.7677%)" [ref=f4e925]:
+                  - generic [ref=f4e926]: 
+                  - text: 0.0900 (9.7677%)
+                - cell "5,700,005,000" [ref=f4e927]
+              - row [ref=f4e928]:
+                - cell [ref=f4e929]:
+                  - link [ref=f4e930] [cursor=pointer]:
+                    - /url: /debt/P01GHS080727
+                    - strong [ref=f4e931]: P01GHS080727
+                - cell "91.5000" [ref=f4e932]
+                - cell " 0.0900 (9.8457%)" [ref=f4e933]:
+                  - generic [ref=f4e934]: 
+                  - text: 0.0900 (9.8457%)
+                - cell "4,000,005,000" [ref=f4e935]
+              - row [ref=f4e936]:
+                - cell [ref=f4e937]:
+                  - link [ref=f4e938] [cursor=pointer]:
+                    - /url: /debt/P03VRR280627
+                    - strong [ref=f4e939]: P03VRR280627
+                - cell "99.8000" [ref=f4e940]
+                - cell "0.0000 (0.0000%)" [ref=f4e941]
+                - cell "3,000,000,000" [ref=f4e942]
+              - row [ref=f4e943]:
+                - cell [ref=f4e944]:
+                  - link [ref=f4e945] [cursor=pointer]:
+                    - /url: /debt/P03GHS261126
+                    - strong [ref=f4e946]: P03GHS261126
+                - cell "97.7600" [ref=f4e947]
+                - cell " 0.0950 (9.7271%)" [ref=f4e948]:
+                  - generic [ref=f4e949]: 
+                  - text: 0.0950 (9.7271%)
+                - cell "2,000,005,000" [ref=f4e950]
+              - row [ref=f4e951]:
+                - cell [ref=f4e952]:
+                  - link [ref=f4e953] [cursor=pointer]:
+                    - /url: /debt/P01GIS210127
+                    - strong [ref=f4e954]: P01GIS210127
+                - cell "96.0500" [ref=f4e955]
+                - cell " 0.0950 (9.9005%)" [ref=f4e956]:
+                  - generic [ref=f4e957]: 
+                  - text: 0.0950 (9.9005%)
+                - cell "2,000,005,000" [ref=f4e958]
+              - row [ref=f4e959]:
+                - cell [ref=f4e960]:
+                  - link [ref=f4e961] [cursor=pointer]:
+                    - /url: /debt/P01GHS200527
+                    - strong [ref=f4e962]: P01GHS200527
+                - cell "92.0450" [ref=f4e963]
+                - cell "0.0000 (0.0000%)" [ref=f4e964]
+                - cell "90,000,000" [ref=f4e965]
+              - row [ref=f4e966]:
+                - cell [ref=f4e967]:
+                  - link [ref=f4e968] [cursor=pointer]:
+                    - /url: /debt/P05FRR180631
+                    - strong [ref=f4e969]: P05FRR180631
+                - cell "100.1700" [ref=f4e970]
+                - cell " -0.5100 (-50.6555%)" [ref=f4e971]:
+                  - generic [ref=f4e972]: 
+                  - text: "-0.5100 (-50.6555%)"
+                - cell "10,000" [ref=f4e973]
+              - row [ref=f4e974]:
+                - cell [ref=f4e975]:
+                  - link [ref=f4e976] [cursor=pointer]:
+                    - /url: /debt/P05FRR050831
+                    - strong [ref=f4e977]: P05FRR050831
+                - cell "98.0800" [ref=f4e978]
+                - cell " -0.3800 (-38.5944%)" [ref=f4e979]:
+                  - generic [ref=f4e980]: 
+                  - text: "-0.3800 (-38.5944%)"
+                - cell "5,000" [ref=f4e981]
+        - generic [ref=f4e982]:
+          - heading "TOP ADVANCERS" [level=3] [ref=f4e983]
+          - table [ref=f4e985]:
+            - rowgroup [ref=f4e986]:
+              - row [ref=f4e987]:
+                - columnheader "SYMBOL" [ref=f4e988] [cursor=pointer]
+                - columnheader "PRICE" [ref=f4e989] [cursor=pointer]
+                - columnheader "CHANGE" [ref=f4e990] [cursor=pointer]
+                - columnheader "VOLUME" [ref=f4e991] [cursor=pointer]
+            - rowgroup [ref=f4e992]:
+              - row [ref=f4e993]:
+                - cell [ref=f4e994]:
+                  - link [ref=f4e995] [cursor=pointer]:
+                    - /url: /debt/P10FRZ240735
+                    - strong [ref=f4e996]: P10FRZ240735
+                - cell "35.5100" [ref=f4e997]
+                - cell " 0.1300 (36.7439%)" [ref=f4e998]:
+                  - generic [ref=f4e999]: 
+                  - text: 0.1300 (36.7439%)
+                - cell "5,000" [ref=f4e1000]
+              - row [ref=f4e1001]:
+                - cell [ref=f4e1002]:
+                  - link [ref=f4e1003] [cursor=pointer]:
+                    - /url: /debt/P03FRR050829
+                    - strong [ref=f4e1004]: P03FRR050829
+                - cell "97.7300" [ref=f4e1005]
+                - cell " 0.2300 (23.5897%)" [ref=f4e1006]:
+                  - generic [ref=f4e1007]: 
+                  - text: 0.2300 (23.5897%)
+                - cell "5,000" [ref=f4e1008]
+              - row [ref=f4e1009]:
+                - cell [ref=f4e1010]:
+                  - link [ref=f4e1011] [cursor=pointer]:
+                    - /url: /debt/P10FRZ220136
+                    - strong [ref=f4e1012]: P10FRZ220136
+                - cell "33.9700" [ref=f4e1013]
+                - cell " 0.0600 (17.6939%)" [ref=f4e1014]:
+                  - generic [ref=f4e1015]: 
+                  - text: 0.0600 (17.6939%)
+                - cell "5,000" [ref=f4e1016]
+              - row [ref=f4e1017]:
+                - cell [ref=f4e1018]:
+                  - link [ref=f4e1019] [cursor=pointer]:
+                    - /url: /debt/P01GHS020927
+                    - strong [ref=f4e1020]: P01GHS020927
+                - cell "89.6900" [ref=f4e1021]
+                - cell " 0.0900 (10.0446%)" [ref=f4e1022]:
+                  - generic [ref=f4e1023]: 
+                  - text: 0.0900 (10.0446%)
+                - cell "5,000" [ref=f4e1024]
+              - row [ref=f4e1025]:
+                - cell [ref=f4e1026]:
+                  - link [ref=f4e1027] [cursor=pointer]:
+                    - /url: /debt/P01GHS190827
+                    - strong [ref=f4e1028]: P01GHS190827
+                - cell "90.2000" [ref=f4e1029]
+                - cell " 0.0900 (9.9878%)" [ref=f4e1030]:
+                  - generic [ref=f4e1031]: 
+                  - text: 0.0900 (9.9878%)
+                - cell "5,000" [ref=f4e1032]
+              - row [ref=f4e1033]:
+                - cell [ref=f4e1034]:
+                  - link [ref=f4e1035] [cursor=pointer]:
+                    - /url: /debt/P01GIS210127
+                    - strong [ref=f4e1036]: P01GIS210127
+                - cell "96.0500" [ref=f4e1037]
+                - cell " 0.0950 (9.9005%)" [ref=f4e1038]:
+                  - generic [ref=f4e1039]: 
+                  - text: 0.0950 (9.9005%)
+                - cell "2,000,005,000" [ref=f4e1040]
+              - row [ref=f4e1041]:
+                - cell [ref=f4e1042]:
+                  - link [ref=f4e1043] [cursor=pointer]:
+                    - /url: /debt/P01GHS080727
+                    - strong [ref=f4e1044]: P01GHS080727
+                - cell "91.5000" [ref=f4e1045]
+                - cell " 0.0900 (9.8457%)" [ref=f4e1046]:
+                  - generic [ref=f4e1047]: 
+                  - text: 0.0900 (9.8457%)
+                - cell "4,000,005,000" [ref=f4e1048]
+              - row [ref=f4e1049]:
+                - cell [ref=f4e1050]:
+                  - link [ref=f4e1051] [cursor=pointer]:
+                    - /url: /debt/P01GHS100627
+                    - strong [ref=f4e1052]: P01GHS100627
+                - cell "92.2300" [ref=f4e1053]
+                - cell " 0.0900 (9.7677%)" [ref=f4e1054]:
+                  - generic [ref=f4e1055]: 
+                  - text: 0.0900 (9.7677%)
+                - cell "5,700,005,000" [ref=f4e1056]
+              - row [ref=f4e1057]:
+                - cell [ref=f4e1058]:
+                  - link [ref=f4e1059] [cursor=pointer]:
+                    - /url: /debt/P03GHS261126
+                    - strong [ref=f4e1060]: P03GHS261126
+                - cell "97.7600" [ref=f4e1061]
+                - cell " 0.0950 (9.7271%)" [ref=f4e1062]:
+                  - generic [ref=f4e1063]: 
+                  - text: 0.0950 (9.7271%)
+                - cell "2,000,005,000" [ref=f4e1064]
+              - row [ref=f4e1065]:
+                - cell [ref=f4e1066]:
+                  - link [ref=f4e1067] [cursor=pointer]:
+                    - /url: /debt/P01GHS130527
+                    - strong [ref=f4e1068]: P01GHS130527
+                - cell "92.9700" [ref=f4e1069]
+                - cell " 0.0900 (9.6899%)" [ref=f4e1070]:
+                  - generic [ref=f4e1071]: 
+                  - text: 0.0900 (9.6899%)
+                - cell "5,000" [ref=f4e1072]
+        - generic [ref=f4e1073]:
+          - heading "TOP DECLINERS" [level=3] [ref=f4e1074]
+          - table [ref=f4e1075]:
+            - rowgroup [ref=f4e1076]:
+              - row [ref=f4e1077]:
+                - columnheader "SYMBOL" [ref=f4e1078] [cursor=pointer]
+                - columnheader "PRICE" [ref=f4e1079] [cursor=pointer]
+                - columnheader "CHANGE" [ref=f4e1080] [cursor=pointer]
+                - columnheader "VOLUME" [ref=f4e1081] [cursor=pointer]
+            - rowgroup [ref=f4e1082]:
+              - row [ref=f4e1083]:
+                - cell [ref=f4e1084]:
+                  - link [ref=f4e1085] [cursor=pointer]:
+                    - /url: /debt/P10VRR160436
+                    - strong [ref=f4e1086]: P10VRR160436
+                - cell "100.5500" [ref=f4e1087]
+                - cell " -0.7000 (-69.1358%)" [ref=f4e1088]:
+                  - generic [ref=f4e1089]: 
+                  - text: "-0.7000 (-69.1358%)"
+                - cell "7,130,000,000" [ref=f4e1090]
+              - row [ref=f4e1091]:
+                - cell [ref=f4e1092]:
+                  - link [ref=f4e1093] [cursor=pointer]:
+                    - /url: /debt/P05FRR180631
+                    - strong [ref=f4e1094]: P05FRR180631
+                - cell "100.1700" [ref=f4e1095]
+                - cell " -0.5100 (-50.6555%)" [ref=f4e1096]:
+                  - generic [ref=f4e1097]: 
+                  - text: "-0.5100 (-50.6555%)"
+                - cell "10,000" [ref=f4e1098]
+              - row [ref=f4e1099]:
+                - cell [ref=f4e1100]:
+                  - link [ref=f4e1101] [cursor=pointer]:
+                    - /url: /debt/P05FRR050831
+                    - strong [ref=f4e1102]: P05FRR050831
+                - cell "98.0800" [ref=f4e1103]
+                - cell " -0.3800 (-38.5944%)" [ref=f4e1104]:
+                  - generic [ref=f4e1105]: 
+                  - text: "-0.3800 (-38.5944%)"
+                - cell "5,000" [ref=f4e1106]
+              - row [ref=f4e1107]:
+                - cell [ref=f4e1108]:
+                  - link [ref=f4e1109] [cursor=pointer]:
+                    - /url: /debt/P05FRR300930
+                    - strong [ref=f4e1110]: P05FRR300930
+                - cell "97.3400" [ref=f4e1111]
+                - cell " -0.2000 (-20.5044%)" [ref=f4e1112]:
+                  - generic [ref=f4e1113]: 
+                  - text: "-0.2000 (-20.5044%)"
+                - cell "5,000" [ref=f4e1114]
+              - row [ref=f4e1115]:
+                - cell [ref=f4e1116]:
+                  - link [ref=f4e1117] [cursor=pointer]:
+                    - /url: /debt/P05FRR090130
+                    - strong [ref=f4e1118]: P05FRR090130
+                - cell "100.0000" [ref=f4e1119]
+                - cell " -0.2000 (-19.9601%)" [ref=f4e1120]:
+                  - generic [ref=f4e1121]: 
+                  - text: "-0.2000 (-19.9601%)"
+                - cell "5,000" [ref=f4e1122]
+              - row [ref=f4e1123]:
+                - cell [ref=f4e1124]:
+                  - link [ref=f4e1125] [cursor=pointer]:
+                    - /url: /debt/P05FRR220131
+                    - strong [ref=f4e1126]: P05FRR220131
+                - cell "93.0000" [ref=f4e1127]
+                - cell " -0.1500 (-16.1031%)" [ref=f4e1128]:
+                  - generic [ref=f4e1129]: 
+                  - text: "-0.1500 (-16.1031%)"
+                - cell "5,000" [ref=f4e1130]
+              - row [ref=f4e1131]:
+                - cell [ref=f4e1132]:
+                  - link [ref=f4e1133] [cursor=pointer]:
+                    - /url: /debt/P05FRR300530
+                    - strong [ref=f4e1134]: P05FRR300530
+                - cell "96.7000" [ref=f4e1135]
+                - cell " -0.1300 (-13.4256%)" [ref=f4e1136]:
+                  - generic [ref=f4e1137]: 
+                  - text: "-0.1300 (-13.4256%)"
+                - cell "5,000" [ref=f4e1138]
+              - row [ref=f4e1139]:
+                - cell [ref=f4e1140]:
+                  - link [ref=f4e1141] [cursor=pointer]:
+                    - /url: /debt/P05FRR180929
+                    - strong [ref=f4e1142]: P05FRR180929
+                - cell "104.6400" [ref=f4e1143]
+                - cell " -0.1400 (-13.3613%)" [ref=f4e1144]:
+                  - generic [ref=f4e1145]: 
+                  - text: "-0.1400 (-13.3613%)"
+                - cell "5,000" [ref=f4e1146]
+              - row [ref=f4e1147]:
+                - cell [ref=f4e1148]:
+                  - link [ref=f4e1149] [cursor=pointer]:
+                    - /url: /debt/P05FRR211029
+                    - strong [ref=f4e1150]: P05FRR211029
+                - cell "101.4800" [ref=f4e1151]
+                - cell " -0.1200 (-11.8110%)" [ref=f4e1152]:
+                  - generic [ref=f4e1153]: 
+                  - text: "-0.1200 (-11.8110%)"
+                - cell "5,000" [ref=f4e1154]
+              - row [ref=f4e1155]:
+                - cell [ref=f4e1156]:
+                  - link [ref=f4e1157] [cursor=pointer]:
+                    - /url: /debt/P05FRR280629
+                    - strong [ref=f4e1158]: P05FRR280629
+                - cell "107.2600" [ref=f4e1159]
+                - cell " -0.1200 (-11.1753%)" [ref=f4e1160]:
+                  - generic [ref=f4e1161]: 
+                  - text: "-0.1200 (-11.1753%)"
+                - cell "5,000" [ref=f4e1162]
+    - generic [ref=f4e1163]:
+      - generic [ref=f4e1164]:
+        - heading "Watchlist" [level=1] [ref=f4e1166]
+        - generic [ref=f4e1168]:
+          - generic [ref=f4e1169]: 
+          - textbox "Search for symbols or company" [ref=f4e1170]
+      - generic [ref=f4e1172]:
+        - text: Watchlist is empty.
+        - generic [ref=f4e1173]: 
+        - text: Search and add symbols from the search bar.
+    - generic [ref=f4e1174]:
+      - heading "Market Watch" [level=1] [ref=f4e1175]
+      - generic [ref=f4e1177]:
+        - generic [ref=f4e1178] [cursor=pointer]: Main Board
+        - generic [ref=f4e1179] [cursor=pointer]: GEM Board
+        - generic [ref=f4e1180] [cursor=pointer]: Debt
+      - generic [ref=f4e1181]:
+        - generic [ref=f4e1182]:
+          - generic [ref=f4e1183] [cursor=pointer]: REGULAR MARKET
+          - generic [ref=f4e1184] [cursor=pointer]: DELIVERABLE FUTURES CONTRACT
+          - generic [ref=f4e1185] [cursor=pointer]: CASH SETTLED FUTURES CONTRACT
+        - generic [ref=f4e1186]:
+          - heading "Filter by" [level=3] [ref=f4e1187]
+          - generic [ref=f4e1188]:
+            - generic [ref=f4e1189]:
+              - generic [ref=f4e1190]: SECTOR
+              - combobox [ref=f4e1192]:
+                - option "Select..." [selected]
+                - option "AUTOMOBILE ASSEMBLER"
+                - option "AUTOMOBILE PARTS & ACCESSORIES"
+                - option "CABLE & ELECTRICAL GOODS"
+                - option "CEMENT"
+                - option "CHEMICAL"
+                - option "CLOSE - END MUTUAL FUND"
+                - option "COMMERCIAL BANKS"
+                - option "ENGINEERING"
+                - option "FERTILIZER"
+                - option "FOOD & PERSONAL CARE PRODUCTS"
+                - option "GLASS & CERAMICS"
+                - option "INSURANCE"
+                - option "INV. BANKS / INV. COS. / SECURITIES COS."
+                - option "JUTE"
+                - option "LEASING COMPANIES"
+                - option "LEATHER & TANNERIES"
+                - option "MISCELLANEOUS"
+                - option "MODARABAS"
+                - option "OIL & GAS EXPLORATION COMPANIES"
+                - option "OIL & GAS MARKETING COMPANIES"
+                - option "PAPER, BOARD & PACKAGING"
+                - option "PHARMACEUTICALS"
+                - option "POWER GENERATION & DISTRIBUTION"
+                - option "REFINERY"
+                - option "SUGAR & ALLIED INDUSTRIES"
+                - option "SYNTHETIC & RAYON"
+                - option "TECHNOLOGY & COMMUNICATION"
+                - option "TEXTILE COMPOSITE"
+                - option "TEXTILE SPINNING"
+                - option "TEXTILE WEAVING"
+                - option "TOBACCO"
+                - option "TRANSPORT"
+                - option "VANASPATI & ALLIED INDUSTRIES"
+                - option "WOOLLEN"
+                - option "REAL ESTATE INVESTMENT TRUST"
+                - option "EXCHANGE TRADED FUNDS"
+                - option "PROPERTY"
+                - option "APPAREL"
+            - generic [ref=f4e1193]:
+              - generic [ref=f4e1194]: INDEX
+              - combobox [ref=f4e1196]:
+                - option "Select..." [selected]
+                - option "KSE100"
+                - option "KSE100PR"
+                - option "ALLSHR"
+                - option "KSE30"
+                - option "KMI30"
+                - option "BKTI"
+                - option "OGTI"
+                - option "KMIALLSHR"
+                - option "PSXDIV20"
+                - option "UPP9"
+                - option "NITPGI"
+                - option "NBPPGI"
+                - option "MZNPI"
+                - option "JSMFI"
+                - option "ACI"
+                - option "JSGBKTI"
+                - option "HBLTTI"
+                - option "MII30"
+        - generic [ref=f4e1200]:
+          - generic [ref=f4e1202]:
+            - text: Show
+            - combobox "Show entries" [ref=f4e1203]:
+              - option "10"
+              - option "25" [selected]
+              - option "50"
+              - option "100"
+              - option "All"
+            - text: entries
+          - generic [ref=f4e1205]:
+            - text: "Search:"
+            - searchbox "Search:" [ref=f4e1206]
+          - grid [ref=f4e1207]:
+            - rowgroup [ref=f4e1208]:
+              - row [ref=f4e1209]:
+                - 'columnheader "SYMBOL: activate to sort column ascending" [ref=f4e1210] [cursor=pointer]': SYMBOL
+                - 'columnheader "LDCP: activate to sort column ascending" [ref=f4e1211] [cursor=pointer]': LDCP
+                - 'columnheader "OPEN: activate to sort column ascending" [ref=f4e1212] [cursor=pointer]': OPEN
+                - 'columnheader "HIGH: activate to sort column ascending" [ref=f4e1213] [cursor=pointer]': HIGH
+                - 'columnheader "LOW: activate to sort column ascending" [ref=f4e1214] [cursor=pointer]': LOW
+                - 'columnheader "CURRENT: activate to sort column ascending" [ref=f4e1215] [cursor=pointer]': CURRENT
+                - 'columnheader "CHANGE: activate to sort column ascending" [ref=f4e1216] [cursor=pointer]': CHANGE
+                - 'columnheader "CHANGE (%): activate to sort column ascending" [ref=f4e1217] [cursor=pointer]': CHANGE (%)
+                - 'columnheader "VOLUME: activate to sort column ascending" [ref=f4e1218] [cursor=pointer]': VOLUME
+            - rowgroup [ref=f4e1219]:
+              - row [ref=f4e1220]:
+                - gridcell [ref=f4e1221]:
+                  - link [ref=f4e1222] [cursor=pointer]:
+                    - /url: /company/CNERGY
+                    - strong [ref=f4e1223]: CNERGY
+                - gridcell "12.37" [ref=f4e1224]
+                - gridcell "12.21" [ref=f4e1225]
+                - gridcell "13.05" [ref=f4e1226]
+                - gridcell "11.86" [ref=f4e1227]
+                - gridcell "12.93" [ref=f4e1228]
+                - gridcell " 0.56" [ref=f4e1229]:
+                  - generic [ref=f4e1230]: 
+                  - text: "0.56"
+                - gridcell " 4.53%" [ref=f4e1231]:
+                  - generic [ref=f4e1232]: 
+                  - text: 4.53%
+                - gridcell "104,274,125" [ref=f4e1233]
+              - row [ref=f4e1234]:
+                - gridcell [ref=f4e1235]:
+                  - link [ref=f4e1236] [cursor=pointer]:
+                    - /url: /company/PRL
+                    - strong [ref=f4e1237]: PRL
+                - gridcell "80.93" [ref=f4e1238]
+                - gridcell "79.90" [ref=f4e1239]
+                - gridcell "87.10" [ref=f4e1240]
+                - gridcell "74.74" [ref=f4e1241]
+                - gridcell "85.63" [ref=f4e1242]
+                - gridcell " 4.70" [ref=f4e1243]:
+                  - generic [ref=f4e1244]: 
+                  - text: "4.70"
+                - gridcell " 5.81%" [ref=f4e1245]:
+                  - generic [ref=f4e1246]: 
+                  - text: 5.81%
+                - gridcell "66,012,255" [ref=f4e1247]
+              - row [ref=f4e1248]:
+                - gridcell [ref=f4e1249]:
+                  - link [ref=f4e1250] [cursor=pointer]:
+                    - /url: /company/MDTL
+                    - strong [ref=f4e1251]: MDTL
+                - gridcell "6.70" [ref=f4e1252]
+                - gridcell "6.79" [ref=f4e1253]
+                - gridcell "7.50" [ref=f4e1254]
+                - gridcell "6.40" [ref=f4e1255]
+                - gridcell "6.92" [ref=f4e1256]
+                - gridcell " 0.22" [ref=f4e1257]:
+                  - generic [ref=f4e1258]: 
+                  - text: "0.22"
+                - gridcell " 3.28%" [ref=f4e1259]:
+                  - generic [ref=f4e1260]: 
+                  - text: 3.28%
+                - gridcell "35,452,662" [ref=f4e1261]
+              - row [ref=f4e1262]:
+                - gridcell [ref=f4e1263]:
+                  - link [ref=f4e1264] [cursor=pointer]:
+                    - /url: /company/WTL
+                    - strong [ref=f4e1265]: WTL
+                - gridcell "1.09" [ref=f4e1266]
+                - gridcell "1.09" [ref=f4e1267]
+                - gridcell "1.10" [ref=f4e1268]
+                - gridcell "1.06" [ref=f4e1269]
+                - gridcell "1.09" [ref=f4e1270]
+                - gridcell "0.00" [ref=f4e1271]
+                - gridcell "0.00%" [ref=f4e1272]
+                - gridcell "32,608,697" [ref=f4e1273]
+              - row [ref=f4e1274]:
+                - gridcell [ref=f4e1275]:
+                  - link [ref=f4e1276] [cursor=pointer]:
+                    - /url: /company/WAVESAPPR
+                    - strong [ref=f4e1277]: WAVESAPPR
+                - gridcell "0.22" [ref=f4e1278]
+                - gridcell "0.20" [ref=f4e1279]
+                - gridcell "0.25" [ref=f4e1280]
+                - gridcell "0.15" [ref=f4e1281]
+                - gridcell "0.17" [ref=f4e1282]
+                - gridcell " -0.05" [ref=f4e1283]:
+                  - generic [ref=f4e1284]: 
+                  - text: "-0.05"
+                - gridcell " -22.73%" [ref=f4e1285]:
+                  - generic [ref=f4e1286]: 
+                  - text: "-22.73%"
+                - gridcell "27,331,932" [ref=f4e1287]
+              - row [ref=f4e1288]:
+                - gridcell [ref=f4e1289]:
+                  - link [ref=f4e1290] [cursor=pointer]:
+                    - /url: /company/TSBL
+                    - strong [ref=f4e1291]: TSBL
+                - gridcell "2.42" [ref=f4e1292]
+                - gridcell "2.42" [ref=f4e1293]
+                - gridcell "2.50" [ref=f4e1294]
+                - gridcell "2.25" [ref=f4e1295]
+                - gridcell "2.45" [ref=f4e1296]
+                - gridcell " 0.03" [ref=f4e1297]:
+                  - generic [ref=f4e1298]: 
+                  - text: "0.03"
+                - gridcell " 1.24%" [ref=f4e1299]:
+                  - generic [ref=f4e1300]: 
+                  - text: 1.24%
+                - gridcell "26,433,822" [ref=f4e1301]
+              - row [ref=f4e1302]:
+                - gridcell [ref=f4e1303]:
+                  - link [ref=f4e1304] [cursor=pointer]:
+                    - /url: /company/MLCF
+                    - strong [ref=f4e1305]: MLCF
+                - gridcell "94.09" [ref=f4e1306]
+                - gridcell "93.00" [ref=f4e1307]
+                - gridcell "95.99" [ref=f4e1308]
+                - gridcell "89.75" [ref=f4e1309]
+                - gridcell "95.40" [ref=f4e1310]
+                - gridcell " 1.31" [ref=f4e1311]:
+                  - generic [ref=f4e1312]: 
+                  - text: "1.31"
+                - gridcell " 1.39%" [ref=f4e1313]:
+                  - generic [ref=f4e1314]: 
+                  - text: 1.39%
+                - gridcell "17,761,578" [ref=f4e1315]
+              - row [ref=f4e1316]:
+                - gridcell [ref=f4e1317]:
+                  - link [ref=f4e1318] [cursor=pointer]:
+                    - /url: /company/TISL
+                    - strong [ref=f4e1319]: TISL
+                - gridcell "4.24" [ref=f4e1320]
+                - gridcell "4.12" [ref=f4e1321]
+                - gridcell "4.36" [ref=f4e1322]
+                - gridcell "4.12" [ref=f4e1323]
+                - gridcell "4.18" [ref=f4e1324]
+                - gridcell " -0.06" [ref=f4e1325]:
+                  - generic [ref=f4e1326]: 
+                  - text: "-0.06"
+                - gridcell " -1.41%" [ref=f4e1327]:
+                  - generic [ref=f4e1328]: 
+                  - text: "-1.41%"
+                - gridcell "17,130,380" [ref=f4e1329]
+              - row [ref=f4e1330]:
+                - gridcell [ref=f4e1331]:
+                  - link [ref=f4e1332] [cursor=pointer]:
+                    - /url: /company/SSGC
+                    - strong [ref=f4e1333]: SSGC
+                - gridcell "23.89" [ref=f4e1334]
+                - gridcell "23.74" [ref=f4e1335]
+                - gridcell "23.80" [ref=f4e1336]
+                - gridcell "22.51" [ref=f4e1337]
+                - gridcell "23.64" [ref=f4e1338]
+                - gridcell " -0.25" [ref=f4e1339]:
+                  - generic [ref=f4e1340]: 
+                  - text: "-0.25"
+                - gridcell " -1.05%" [ref=f4e1341]:
+                  - generic [ref=f4e1342]: 
+                  - text: "-1.05%"
+                - gridcell "14,677,183" [ref=f4e1343]
+              - row [ref=f4e1344]:
+                - gridcell [ref=f4e1345]:
+                  - link [ref=f4e1346] [cursor=pointer]:
+                    - /url: /company/FNEL
+                    - strong [ref=f4e1347]: FNEL
+                - gridcell "1.14" [ref=f4e1348]
+                - gridcell "1.14" [ref=f4e1349]
+                - gridcell "1.14" [ref=f4e1350]
+                - gridcell "1.11" [ref=f4e1351]
+                - gridcell "1.13" [ref=f4e1352]
+                - gridcell " -0.01" [ref=f4e1353]:
+                  - generic [ref=f4e1354]: 
+                  - text: "-0.01"
+                - gridcell " -0.88%" [ref=f4e1355]:
+                  - generic [ref=f4e1356]: 
+                  - text: "-0.88%"
+                - gridcell "12,869,381" [ref=f4e1357]
+              - row [ref=f4e1358]:
+                - gridcell "BOP XD" [ref=f4e1359]:
+                  - link [ref=f4e1360] [cursor=pointer]:
+                    - /url: /company/BOP
+                    - strong [ref=f4e1361]: BOP
+                  - generic [ref=f4e1362]: XD
+                - gridcell "31.72" [ref=f4e1363]
+                - gridcell "31.00" [ref=f4e1364]
+                - gridcell "31.81" [ref=f4e1365]
+                - gridcell "30.25" [ref=f4e1366]
+                - gridcell "31.72" [ref=f4e1367]
+                - gridcell "0.00" [ref=f4e1368]
+                - gridcell "0.00%" [ref=f4e1369]
+                - gridcell "12,777,073" [ref=f4e1370]
+              - row [ref=f4e1371]:
+                - gridcell [ref=f4e1372]:
+                  - link [ref=f4e1373] [cursor=pointer]:
+                    - /url: /company/ASL
+                    - strong [ref=f4e1374]: ASL
+                - gridcell "17.30" [ref=f4e1375]
+                - gridcell "17.34" [ref=f4e1376]
+                - gridcell "17.60" [ref=f4e1377]
+                - gridcell "16.40" [ref=f4e1378]
+                - gridcell "16.92" [ref=f4e1379]
+                - gridcell " -0.38" [ref=f4e1380]:
+                  - generic [ref=f4e1381]: 
+                  - text: "-0.38"
+                - gridcell " -2.20%" [ref=f4e1382]:
+                  - generic [ref=f4e1383]: 
+                  - text: "-2.20%"
+                - gridcell "12,690,377" [ref=f4e1384]
+              - row [ref=f4e1385]:
+                - gridcell [ref=f4e1386]:
+                  - link [ref=f4e1387] [cursor=pointer]:
+                    - /url: /company/KEL
+                    - strong [ref=f4e1388]: KEL
+                - gridcell "6.81" [ref=f4e1389]
+                - gridcell "6.75" [ref=f4e1390]
+                - gridcell "6.89" [ref=f4e1391]
+                - gridcell "6.67" [ref=f4e1392]
+                - gridcell "6.85" [ref=f4e1393]
+                - gridcell " 0.04" [ref=f4e1394]:
+                  - generic [ref=f4e1395]: 
+                  - text: "0.04"
+                - gridcell " 0.59%" [ref=f4e1396]:
+                  - generic [ref=f4e1397]: 
+                  - text: 0.59%
+                - gridcell "11,400,744" [ref=f4e1398]
+              - row [ref=f4e1399]:
+                - gridcell [ref=f4e1400]:
+                  - link [ref=f4e1401] [cursor=pointer]:
+                    - /url: /company/PIBTL
+                    - strong [ref=f4e1402]: PIBTL
+                - gridcell "15.12" [ref=f4e1403]
+                - gridcell "14.76" [ref=f4e1404]
+                - gridcell "15.54" [ref=f4e1405]
+                - gridcell "14.70" [ref=f4e1406]
+                - gridcell "15.31" [ref=f4e1407]
+                - gridcell " 0.19" [ref=f4e1408]:
+                  - generic [ref=f4e1409]: 
+                  - text: "0.19"
+                - gridcell " 1.26%" [ref=f4e1410]:
+                  - generic [ref=f4e1411]: 
+                  - text: 1.26%
+                - gridcell "9,282,994" [ref=f4e1412]
+              - row [ref=f4e1413]:
+                - gridcell [ref=f4e1414]:
+                  - link [ref=f4e1415] [cursor=pointer]:
+                    - /url: /company/TPLP
+                    - strong [ref=f4e1416]: TPLP
+                - gridcell "12.71" [ref=f4e1417]
+                - gridcell "12.82" [ref=f4e1418]
+                - gridcell "12.99" [ref=f4e1419]
+                - gridcell "12.21" [ref=f4e1420]
+                - gridcell "12.59" [ref=f4e1421]
+                - gridcell " -0.12" [ref=f4e1422]:
+                  - generic [ref=f4e1423]: 
+                  - text: "-0.12"
+                - gridcell " -0.94%" [ref=f4e1424]:
+                  - generic [ref=f4e1425]: 
+                  - text: "-0.94%"
+                - gridcell "8,397,154" [ref=f4e1426]
+              - row [ref=f4e1427]:
+                - gridcell "HASCOL NC" [ref=f4e1428]:
+                  - link [ref=f4e1429] [cursor=pointer]:
+                    - /url: /company/HASCOL
+                    - strong [ref=f4e1430]: HASCOL
+                  - generic [ref=f4e1431]: NC
+                - gridcell "19.57" [ref=f4e1432]
+                - gridcell "19.56" [ref=f4e1433]
+                - gridcell "19.69" [ref=f4e1434]
+                - gridcell "18.81" [ref=f4e1435]
+                - gridcell "19.55" [ref=f4e1436]
+                - gridcell " -0.02" [ref=f4e1437]:
+                  - generic [ref=f4e1438]: 
+                  - text: "-0.02"
+                - gridcell " -0.10%" [ref=f4e1439]:
+                  - generic [ref=f4e1440]: 
+                  - text: "-0.10%"
+                - gridcell "7,903,625" [ref=f4e1441]
+              - row [ref=f4e1442]:
+                - gridcell [ref=f4e1443]:
+                  - link [ref=f4e1444] [cursor=pointer]:
+                    - /url: /company/LOTCHEM
+                    - strong [ref=f4e1445]: LOTCHEM
+                - gridcell "25.56" [ref=f4e1446]
+                - gridcell "25.20" [ref=f4e1447]
+                - gridcell "25.50" [ref=f4e1448]
+                - gridcell "24.31" [ref=f4e1449]
+                - gridcell "25.21" [ref=f4e1450]
+                - gridcell " -0.35" [ref=f4e1451]:
+                  - generic [ref=f4e1452]: 
+                  - text: "-0.35"
+                - gridcell " -1.37%" [ref=f4e1453]:
+                  - generic [ref=f4e1454]: 
+                  - text: "-1.37%"
+                - gridcell "7,260,449" [ref=f4e1455]
+              - row [ref=f4e1456]:
+                - gridcell [ref=f4e1457]:
+                  - link [ref=f4e1458] [cursor=pointer]:
+                    - /url: /company/THCCL
+                    - strong [ref=f4e1459]: THCCL
+                - gridcell "79.90" [ref=f4e1460]
+                - gridcell "78.01" [ref=f4e1461]
+                - gridcell "81.47" [ref=f4e1462]
+                - gridcell "76.10" [ref=f4e1463]
+                - gridcell "79.12" [ref=f4e1464]
+                - gridcell " -0.78" [ref=f4e1465]:
+                  - generic [ref=f4e1466]: 
+                  - text: "-0.78"
+                - gridcell " -0.98%" [ref=f4e1467]:
+                  - generic [ref=f4e1468]: 
+                  - text: "-0.98%"
+                - gridcell "6,791,674" [ref=f4e1469]
+              - row [ref=f4e1470]:
+                - gridcell [ref=f4e1471]:
+                  - link [ref=f4e1472] [cursor=pointer]:
+                    - /url: /company/OBOY
+                    - strong [ref=f4e1473]: OBOY
+                - gridcell "15.99" [ref=f4e1474]
+                - gridcell "15.50" [ref=f4e1475]
+                - gridcell "17.59" [ref=f4e1476]
+                - gridcell "14.78" [ref=f4e1477]
+                - gridcell "17.36" [ref=f4e1478]
+                - gridcell " 1.37" [ref=f4e1479]:
+                  - generic [ref=f4e1480]: 
+                  - text: "1.37"
+                - gridcell " 8.57%" [ref=f4e1481]:
+                  - generic [ref=f4e1482]: 
+                  - text: 8.57%
+                - gridcell "6,309,787" [ref=f4e1483]
+              - row [ref=f4e1484]:
+                - gridcell [ref=f4e1485]:
+                  - link [ref=f4e1486] [cursor=pointer]:
+                    - /url: /company/KAPCO
+                    - strong [ref=f4e1487]: KAPCO
+                - gridcell "26.47" [ref=f4e1488]
+                - gridcell "26.50" [ref=f4e1489]
+                - gridcell "26.50" [ref=f4e1490]
+                - gridcell "25.92" [ref=f4e1491]
+                - gridcell "26.00" [ref=f4e1492]
+                - gridcell " -0.47" [ref=f4e1493]:
+                  - generic [ref=f4e1494]: 
+                  - text: "-0.47"
+                - gridcell " -1.78%" [ref=f4e1495]:
+                  - generic [ref=f4e1496]: 
+                  - text: "-1.78%"
+                - gridcell "5,888,567" [ref=f4e1497]
+              - row [ref=f4e1498]:
+                - gridcell [ref=f4e1499]:
+                  - link [ref=f4e1500] [cursor=pointer]:
+                    - /url: /company/CLVL
+                    - strong [ref=f4e1501]: CLVL
+                - gridcell "37.28" [ref=f4e1502]
+                - gridcell "33.55" [ref=f4e1503]
+                - gridcell "39.50" [ref=f4e1504]
+                - gridcell "33.55" [ref=f4e1505]
+                - gridcell "35.60" [ref=f4e1506]
+                - gridcell " -1.68" [ref=f4e1507]:
+                  - generic [ref=f4e1508]: 
+                  - text: "-1.68"
+                - gridcell " -4.51%" [ref=f4e1509]:
+                  - generic [ref=f4e1510]: 
+                  - text: "-4.51%"
+                - gridcell "5,154,260" [ref=f4e1511]
+              - row [ref=f4e1512]:
+                - gridcell [ref=f4e1513]:
+                  - link [ref=f4e1514] [cursor=pointer]:
+                    - /url: /company/PPL
+                    - strong [ref=f4e1515]: PPL
+                - gridcell "213.20" [ref=f4e1516]
+                - gridcell "209.98" [ref=f4e1517]
+                - gridcell "219.99" [ref=f4e1518]
+                - gridcell "207.21" [ref=f4e1519]
+                - gridcell "218.86" [ref=f4e1520]
+                - gridcell " 5.66" [ref=f4e1521]:
+                  - generic [ref=f4e1522]: 
+                  - text: "5.66"
+                - gridcell " 2.66%" [ref=f4e1523]:
+                  - generic [ref=f4e1524]: 
+                  - text: 2.66%
+                - gridcell "5,134,684" [ref=f4e1525]
+              - row [ref=f4e1526]:
+                - gridcell [ref=f4e1527]:
+                  - link [ref=f4e1528] [cursor=pointer]:
+                    - /url: /company/PACE
+                    - strong [ref=f4e1529]: PACE
+                - gridcell "10.12" [ref=f4e1530]
+                - gridcell "10.02" [ref=f4e1531]
+                - gridcell "10.15" [ref=f4e1532]
+                - gridcell "9.36" [ref=f4e1533]
+                - gridcell "10.08" [ref=f4e1534]
+                - gridcell " -0.04" [ref=f4e1535]:
+                  - generic [ref=f4e1536]: 
+                  - text: "-0.04"
+                - gridcell " -0.39%" [ref=f4e1537]:
+                  - generic [ref=f4e1538]: 
+                  - text: "-0.39%"
+                - gridcell "4,880,133" [ref=f4e1539]
+              - row [ref=f4e1540]:
+                - gridcell [ref=f4e1541]:
+                  - link [ref=f4e1542] [cursor=pointer]:
+                    - /url: /company/HBL
+                    - strong [ref=f4e1543]: HBL
+                - gridcell "305.19" [ref=f4e1544]
+                - gridcell "301.03" [ref=f4e1545]
+                - gridcell "305.00" [ref=f4e1546]
+                - gridcell "299.00" [ref=f4e1547]
+                - gridcell "302.65" [ref=f4e1548]
+                - gridcell " -2.54" [ref=f4e1549]:
+                  - generic [ref=f4e1550]: 
+                  - text: "-2.54"
+                - gridcell " -0.83%" [ref=f4e1551]:
+                  - generic [ref=f4e1552]: 
+                  - text: "-0.83%"
+                - gridcell "4,847,380" [ref=f4e1553]
+              - row [ref=f4e1554]:
+                - gridcell [ref=f4e1555]:
+                  - link [ref=f4e1556] [cursor=pointer]:
+                    - /url: /company/PIAHCLA
+                    - strong [ref=f4e1557]: PIAHCLA
+                - gridcell "22.17" [ref=f4e1558]
+                - gridcell "21.64" [ref=f4e1559]
+                - gridcell "21.95" [ref=f4e1560]
+                - gridcell "20.70" [ref=f4e1561]
+                - gridcell "21.70" [ref=f4e1562]
+                - gridcell " -0.47" [ref=f4e1563]:
+                  - generic [ref=f4e1564]: 
+                  - text: "-0.47"
+                - gridcell " -2.12%" [ref=f4e1565]:
+                  - generic [ref=f4e1566]: 
+                  - text: "-2.12%"
+                - gridcell "4,560,839" [ref=f4e1567]
+          - status [ref=f4e1568]: Showing 1 to 25 of 496 entries
+          - generic [ref=f4e1569]:
+            - generic [ref=f4e1570]: Previous
+            - generic [ref=f4e1571]:
+              - generic [ref=f4e1572] [cursor=pointer]: "1"
+              - generic [ref=f4e1573] [cursor=pointer]: "2"
+              - generic [ref=f4e1574] [cursor=pointer]: "3"
+              - generic [ref=f4e1575] [cursor=pointer]: "4"
+              - generic [ref=f4e1576] [cursor=pointer]: "5"
+              - text: …
+              - generic [ref=f4e1577] [cursor=pointer]: "20"
+            - generic [ref=f4e1578] [cursor=pointer]: Next
+      - generic [ref=f4e1579]: Data delayed 5 minutes unless otherwise indicated.Data powered by Capital Stake. See the Capital Stake Terms of Use.
+  - generic [ref=f4e1584]:
+    - generic [ref=f4e1585]:
+      - generic [ref=f4e1587]:
+        - generic [ref=f4e1588]: OTHER PSX WEBSITES
+        - link "PSX Corporate Website" [ref=f4e1590] [cursor=pointer]:
+          - /url: https://psx.com.pk
+        - link "PUCARS" [ref=f4e1592] [cursor=pointer]:
+          - /url: https://www.pucars.com/
+      - generic [ref=f4e1595]:
+        - generic [ref=f4e1596]: PSX HEAD OFFICE
+        - link "Stock Exchange Building, Stock Exchange Road. Karachi - 74000, Pakistan." [ref=f4e1598] [cursor=pointer]:
+          - /url: /
+      - generic [ref=f4e1599]:
+        - generic [ref=f4e1600]:
+          - link [ref=f4e1601] [cursor=pointer]:
+            - /url: https://www.facebook.com/Pakistanstockexchangelimited/
+          - link [ref=f4e1603] [cursor=pointer]:
+            - /url: https://twitter.com/pakstockexgltd
+          - link [ref=f4e1605] [cursor=pointer]:
+            - /url: https://linkedin.com/company/pakistanstockexchangelimited/
+          - link [ref=f4e1607] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UC1ilKViIpulidQm5UL6mGTQ
+          - link [ref=f4e1609] [cursor=pointer]:
+            - /url: https://www.psx.com.pk/psx/news/
+        - generic [ref=f4e1612]:
+          - generic [ref=f4e1613] [cursor=pointer]: Feedback
+          - generic [ref=f4e1615] [cursor=pointer]: Terms of Use
+          - generic [ref=f4e1617] [cursor=pointer]: PSX Data Legal Notice
+      - link [ref=f4e1621] [cursor=pointer]:
+        - /url: https://sdms.secp.gov.pk/
+    - generic [ref=f4e1625]:
+      - generic [ref=f4e1626]: DISCLAIMER
+      - paragraph [ref=f4e1627]: Pakistan Stock Exchange (PSX) & CS Solutions (Pvt.) Limited (CS) do not guarantee the timeliness, accurateness, or completeness of any data or information on the website. PSX & CS makes no warranties, express or implied, as to PSX & CS or any data or values relating thereto or results to be obtained therefrom, and expressly disclaims all warranties of merchantability and fitness for a particular purpose with respect thereto. To the maximum extent allowed by law, PSX & CS, its licensors, and their respective employees, contractors, agents, suppliers and vendors shall have no liability or responsibility whatsoever for any injury or damages – whether direct, indirect, consequential, incidental, punitive or otherwise – arising in connection with PSX & CS or any data or values relating thereto – whether arising from their negligence or otherwise. Nothing in the website shall constitute or be construed as an offering of financial instruments or as investment advice or investment recommendations (i.e., recommendations as to whether or not to “buy”, “sell”, “hold”, or to enter or not to enter into any other transaction involving any specific interest or interests) by PSX & CS or a recommendation as to an investment or other strategy by PSX & CS. Data and other information available via the website should not be considered as information sufficient upon which to base an investment decision.
+    - generic [ref=f4e1628]:
+      - generic [ref=f4e1629]: https://www.psx.com.pk
+      - link "SiteMap" [ref=f4e1634] [cursor=pointer]:
+        - /url: /sitemap
